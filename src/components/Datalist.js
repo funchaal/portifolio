@@ -1,9 +1,9 @@
 import levenshtein from '../algorithms/levenshtein'
 import LinkDB from '../JSON/LinkDB.json'
 
-import lupa from '../images/lupa.svg'
-import clock  from '../images/clock.svg'
-import trash from '../images/trash.svg'
+import lupa_ic from '../images/icons/lupa-ic.svg'
+import clock_ic  from '../images/icons/clock-ic.svg'
+import trash_ic from '../images/icons/trash-ic.svg'
 
 function toRaw(string) {
     return string.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '')
@@ -40,23 +40,23 @@ function Option(props) {
     if (props.type === 'normal') {
         return (
             <li>
-                <img src={lupa} alt=""></img>
+                <img src={lupa_ic} alt=""></img>
                 <span className="option" link={props.link} onClick={() => props.go(props.link, props.title)} onMouseMove={props.hover} onMouseLeave={props.leave}>{props.title}</span>
             </li>
         )
     } else if (props.type === 'history') {
         return (
             <li className="history">
-                <img src={trash} className="delete-icon" alt="" onClick={(e) => {props.dh(props.title, 'delete')}}></img>
+                <img src={trash_ic} className="delete-icon" alt="" onClick={(e) => {props.dh(props.title, 'delete')}}></img>
                 <span className="option history" link={props.link} onClick={() => props.go(props.link, props.title)} onMouseMove={props.hover} onMouseLeave={props.leave}>{props.title}</span>
-                <img src={clock} alt=""></img>
-                <img src={lupa} alt=""></img>
+                <img src={clock_ic} alt=""></img>
+                <img src={lupa_ic} alt=""></img>
             </li>
         )
     }
 }
 
-function createAlgorithm(data, type, hover, leave, go, dh) {
+function createOption(data, type, hover, leave, go, dh) {
     const options = []
 
     for (let i in data) {
@@ -91,14 +91,14 @@ function Datalist(props) {
             const data = [...localDB.split(',')]
             return (
                 <ul>
-                    {createAlgorithm(data, 'history', hover, leave, props.go, props.dh).map((el) => el)}
+                    { createOption(data, 'history', hover, leave, props.go, props.dh).map((el) => el) }
                 </ul>
             )
         }
     }
     else {
         const data = organizer(props.string)
-        const options = createAlgorithm(data, 'normal', hover, leave, props.go)
+        const options = createOption(data, 'normal', hover, leave, props.go)
         return (
             <ul>
                 { options.length ? options.map((el) => el) : <span className="no-data">Sem resultado.</span> }

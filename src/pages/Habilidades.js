@@ -1,21 +1,27 @@
-import skills from '../images/skills_i.svg'
+//Ilustrations
+import skills_il from '../images/illustrations/skills-il.svg'
 
 function Habilidades() {
     return (
         <div id="main_container">
             <div class="side left">
                 <h1 className="title">Habilidades </h1>
-                <div className="title-divisor"></div>
+                <div className="title-divisor divisor"></div>
                 <p className="default">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in massa eu nunc venenatis molestie sit amet sed augue. Etiam elementum viverra pharetra. Quisque porta laoreet mauris lobortis aliquam. Suspendisse tempor est in augue dictum, sed bibendum mi efficitur. Nunc vitae tristique nunc. Nam ac pretium ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec suscipit interdum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula hendrerit dolor a aliquet. Proin sed mattis risus. Vivamus eget est vitae massa laoreet imperdiet non a magna. Nullam dictum fringilla quam, id eleifend neque feugiat non. Integer eros lacus, maximus non eros eget, ornare tincidunt quam. Donec consequat dolor a odio ultrices viverra.
+                    Como sempre tive extremo gosto pela área da técnologia, passei praticamente minha vida me decicando aos estudos na área e desenvolvendo projetos pessoais como programas, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, portanto, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação e manipulação de dados até modelagem 3D e animação.
                 </p>
                 <p className="default">
-                Etiam aliquet, purus in fringilla pellentesque, magna magna imperdiet dolor, sit amet suscipit dolor nibh eu orci. Suspendisse tempus quis ligula ac rhoncus. Aenean pretium gravida tellus, at ornare orci cursus eu. Nunc ut urna justo. Nam sit amet tempor urna, vel efficitur turpis. Pellentesque in dignissim lorem, nec finibus arcu. Vestibulum id facilisis diam. Phasellus mollis feugiat eros quis ultrices. Sed elit neque, rutrum eu ante sit amet, pharetra egestas augue. Maecenas ullamcorper laoreet elit, sit amet vulputate nisl ullamcorper non. Sed in mi posuere, vestibulum risus sed, aliquam urna. In ultrices turpis et semper commodo. Suspendisse vehicula pulvinar purus, sit amet sodales quam posuere in. Praesent sit amet accumsan lacus. Cras scelerisque leo sed nibh suscipit eleifend. Donec fringilla erat egestas eros volutpat, sit amet pellentesque purus egestas.
+                    Acredito que como sempre pratiquei a lógica por causa da programação, hoje tenho grande capacidade e criatividade para a resolução de problemas - isso aliado ao gosto por desafios.
+                </p>
+                <p className="default" style={{ wordBreak: 'auto' }}>
+                    Quanto à habilidades técnicas, programação, análise de dados, e desenhos CAD se destacam. Isso em razão do enorme contato que tive à essas atividades durante a vida.
+                </p>
+                <p className="default" style={{ wordBreak: 'auto' }}>
                 </p>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">
-                    <img src={skills}></img>
+                    <img src={skills_il}></img>
                     <a href="https://www.vecteezy.com/free-vector/skills">Skills Vectors by Vecteezy</a>
                     <span>Animação por Rafael Funchal</span>
                 </div>

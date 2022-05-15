@@ -1,10 +1,15 @@
+//React
 import { Link } from 'react-router-dom'
 
-import pdf from '../images/pdf.svg'
-import contact_us from '../images/contact us.svg'
-import arrow from '../images/arrow thin color.svg'
+//Icons
+import pdf_ic from '../images/icons/pdf-ic.svg'
+import contact_ic from '../images/icons/contact-ic.svg'
+import small_arrow_gradient from '../images/icons/small-arrow-gradient.svg'
 
-function Home(props) {
+//Documents
+import cv from '../documents/Currículo - Rafael Funchal.pdf'
+
+function Home() {
 
   function mouseMv(e) {
     const el = document.getElementById('choose_something')
@@ -20,25 +25,22 @@ function Home(props) {
 
     return (
         <div id="main_container" onMouseMove={mouseMv} onMouseOut={mouseOt}>
+          <div className="side left" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', padding: 0, marginLeft: '50px' }}>
             <div id="intro_title_ctn">
-              <h1>Rafael <br></br>Funchal</h1>
-              <div className="divisor"></div>
-              <h2>Técnico em Comércio Exterior, <br></br>Desenvolvedor Web, <br></br>Estudante de Ciência de Dados.</h2>
+              <div id="intro_title_box">
+                <h1>Rafael <br></br>Funchal</h1>
+                <div className="home-divisor"></div>
+                <h2>Técnico em Comércio Exterior, <br></br>Desenvolvedor Web, <br></br>Estudante de Ciência de Dados.</h2>
+              </div>
+              <div className="divisor more-home-divisor"></div>
             <div className="more">
-              <p>Praser, sou o Rafael, tenho 16 anos, sou formado em Técnico em Comércio Exterior e sou apaixonado em programação e ciência de dados. Estudo programação desde os 11 anos de idade. Hoje me especializo em javascript para desenvolvimento back e front-end, além de python como base para ciência de dados. </p>
-              {/* <p className="hide">Hoje, desenvolvo diversos projetos pessoais para a Web, porém, tendo foco nos estudos em ciêcia de dados e deep learning, principalmente em python, com bibliotecas como Tensorflow, Keras e Sklearn.</p> */}
-              <p className="hide">Como atuante na área de dados, possuo conhecimento avançado em Excel programável, banco de dados SQL e noSQL, machine e deep learning, dentre outras técnologias.</p>
+              <p>Olá, meu nome é Rafael, tenho 16 anos, sou formado em Técnico em Comércio Exterior e sou apaixonado em programação e ciência de dados. Iniciei na programação aos 11 anos de idade. Hoje, me especializo em javascript e React para desenvolvimento web full-stack e me dedico na área de ciência de dados.</p>
+              <p className="hide">Devido à experiencia que obtive na área da computação por estudar a área desde pequeno e ter feito diversos cursos relacionados, também acumulei conhecimentos consolidados em Excel, vba, desenho CAD, banco de dados, entre outros. Além de ter inglês como segunda língua. Este portifólio foi criado por mim como uma forma de detalhar meu perfil profissional além do currículo, então basta navegar!</p>
               <button type="button" onClick={() => document.getElementById('intro_title_ctn').classList.toggle('on')}></button>
             </div>
           </div>
-          <Link to="/contato">
-            <button type="button" id="home_contact">
-              <img src={contact_us}></img>
-              <span>Contato</span>
-              <img src={arrow}></img>
-            </button>
-          </Link>
-          <div className="right side" style={{ width: 'fit-content', marginRight: '4vw', padding: 0 }}>
+          </div>
+          <div className="right side" style={{ justifyContent: 'center', paddingTop: '10vh' }}>
             <div></div>
             <div id="choose_something">
               <span>Choo</span>
@@ -46,11 +48,18 @@ function Home(props) {
               <span>Some</span>
               <span>thing</span>
             </div>
-            <div id="curriculum_container">
+            <div id="cv_ctn">
               <p>Este site foi desenvolvido especialmente por mim com o objetivo de partilhar meus conhecimentos e experiências de forma mais dinâmica, porém, se optar por um resumo em PDF, basta clicar do botão abaixo para acessá-lo.</p>
-              <button><img src={pdf} alt=""></img><a href="./documents/Currículo - Rafael Funchal.pdf" rel="noreferrer" target="_blank"></a></button>
+              <button><a href={cv} target="_blank" type="application/pdf"><img src={pdf_ic} alt=""></img></a></button>
             </div>
           </div>
+            <button class="home-contact" onClick={() => document.querySelector('main').scrollTop = 0}>
+              <Link to="/contato">
+                <img src={contact_ic}></img>
+                <span>Contato</span>
+                <img src={small_arrow_gradient}></img>
+              </Link>
+            </button>
         </div>
     )
 }

@@ -1,17 +1,26 @@
+import calcbro_il from '../images/illustrations/calcbro-il.svg'
+
 function Calcbro() {
     return (
         <div id="main_container">
             <div class="side left">
                 <h1 className="title">Calcbro</h1>
-                <div className="title-divisor"></div>
+                <div className="title-divisor divisor"></div>
                 <p className="default">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in massa eu nunc venenatis molestie sit amet sed augue. Etiam elementum viverra pharetra. Quisque porta laoreet mauris lobortis aliquam. Suspendisse tempor est in augue dictum, sed bibendum mi efficitur. Nunc vitae tristique nunc. Nam ac pretium ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec suscipit interdum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula hendrerit dolor a aliquet. Proin sed mattis risus. Vivamus eget est vitae massa laoreet imperdiet non a magna. Nullam dictum fringilla quam, id eleifend neque feugiat non. Integer eros lacus, maximus non eros eget, ornare tincidunt quam. Donec consequat dolor a odio ultrices viverra.
+                    Esse é um dos mais completos sites que já fiz. Trata-se de um site para realizar cálculos e funções diversas. Inicialmente fiz ele para agilizar alguns cálculos na escola, porém, posteriormente fui adicionando mais funções como cadastro de usuários e sistemas complexos de segunrança no back-end com fins de estudo. Ele utiliza nodeJS em seu back-end e javascript vanilla em seu front-end e é completamente responsivo.
                 </p>
                 <p className="default">
-                Etiam aliquet, purus in fringilla pellentesque, magna magna imperdiet dolor, sit amet suscipit dolor nibh eu orci. Suspendisse tempus quis ligula ac rhoncus. Aenean pretium gravida tellus, at ornare orci cursus eu. Nunc ut urna justo. Nam sit amet tempor urna, vel efficitur turpis. Pellentesque in dignissim lorem, nec finibus arcu. Vestibulum id facilisis diam. Phasellus mollis feugiat eros quis ultrices. Sed elit neque, rutrum eu ante sit amet, pharetra egestas augue. Maecenas ullamcorper laoreet elit, sit amet vulputate nisl ullamcorper non. Sed in mi posuere, vestibulum risus sed, aliquam urna. In ultrices turpis et semper commodo. Suspendisse vehicula pulvinar purus, sit amet sodales quam posuere in. Praesent sit amet accumsan lacus. Cras scelerisque leo sed nibh suscipit eleifend. Donec fringilla erat egestas eros volutpat, sit amet pellentesque purus egestas.
+                    Atualmente ele está em versão de desenvolvimento porém utilizável. Dei uma diminuída em seu desenvolvimento para focar em estudos mais avançados.
+                </p>
+                <p className="default">
+                    O site não está hospedado para evitar gastos desnecessários com servidores etc. Porém o projeto está completo em meu github.
                 </p>
             </div>
-            <div class="side right"></div>
+            <div class="side right">
+            <div className="illustration_ctn">
+                    <img src={calcbro_il}></img>
+                </div>
+            </div>
         </div>
     )
 }
