@@ -9,8 +9,8 @@ function sendMessage(message, type = 'normal') {
     }
     
     const func_1 = function(element) {
-        element.classList.remove('fade-in-down')
-        element.classList.add('fade-out-up')
+        element.classList.remove('on')
+        element.classList.add('off')
         
         setTimeout(() => {
             element.remove()
@@ -45,7 +45,7 @@ function sendMessage(message, type = 'normal') {
     container.appendChild(message_box)
     
     setTimeout(() => {
-        message_box.classList.add('fade-in-down')
+        message_box.classList.add('on')
         setTimeout(() => func_1(message_box), remove_timer)
     }, timer)
 }

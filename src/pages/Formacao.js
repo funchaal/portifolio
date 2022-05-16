@@ -62,7 +62,7 @@ function graduations() {
                 </div>
                 <h3>Outros cursos</h3>
                 <div className="subtitle-divisor divisor"></div>
-                <p className="default">Cursei técnico em comércio exterior na Etec Dona Escolástica Rosa em Santos em 2021 com duração de 1 ano.</p>
+                <p className="default">Fiz diversos cursos suplementares, segue os principais:</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="detailed-item">
                     <img src={graduations_ic}></img>

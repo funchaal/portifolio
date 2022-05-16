@@ -34,6 +34,7 @@ function Projetos() {
                 <h1 className="title">Projetos </h1>
                 <div className="title-divisor divisor"></div>
                 <p className="default">
+                    <span>Os vídeo podem levar um tempo para carregar</span>
                     Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins didáticos quanto para fins pessoais.
                 </p>
                 <p className="default">

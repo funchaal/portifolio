@@ -4,7 +4,7 @@ import studies_il from '../images/illustrations/studies-il.svg'
 //Info images
 import code_piece_im from '../images/info/code-piece-im.jpg'
 import dashboard_wheather_im from '../images/info/dashboard-wheather-im.jpg'
-import flower_art_im from '../images/info/flower-art-im.png'
+import flower_art_im from '../images/info/flower-art-im.jpg'
 import bridge_drawing_im from '../images/info/bridge-drawing-im.jpg'
 import comex_course_im from '../images/info/comex-course-im.jpg'
 import music_art_im from '../images/info/music-art-im.jpg'
