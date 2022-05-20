@@ -6,7 +6,7 @@ import download_ic from '../images/icons/download-ic.svg'
 import github_ic from '../images/icons/github-ic.svg'
 
 //Info videos
-import calcbro_vi from '../videos/info/calcbro-vi.mp4'
+import calcbro_overview_vi from '../videos/info/calcbro-overview-vi.mp4'
 import control_sheet_vi from '../videos/info/control-sheet-vi.mp4'
 import dashboard_water_vi from '../videos/info/dashboard-water-vi.mp4'
 import dashboard_wheather_vi from '../videos/info/dashboard-wheather-vi.mp4'
@@ -50,9 +50,9 @@ function Projetos() {
                     Como se trata de uma aplicação complexa, atualmente ela se encontra em uma versão utilizável, entretanto, ainda em desenvolvimento.
                     O projeto está disponível em meu github.
                 <video autoplay="autoplay" loop="loop" muted>
-                    <source src={calcbro_vi} type="video/mp4"/>
+                    <source src={calcbro_overview_vi} type="video/mp4"/>
                 </video>
-                <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Planilha automatizada de gerenciamento de atividades</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -65,7 +65,7 @@ function Projetos() {
                 <video autoplay="autoplay" loop="loop" muted>
                     <source src={control_sheet_vi} type="video/mp4"/>
                 </video>
-                <button type="button" className="link_btn download"><a href={control_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de gerenciamento</span></a></button>
+                <button type="button" className="link-content download"><a href={control_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de gerenciamento</span></a></button>
                 </p>
                 <h3>Dashboard captura de água da chuva</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -77,7 +77,7 @@ function Projetos() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={dashboard_water_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn download"><a href={dashboard_water_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                    <button type="button" className="link-content download"><a href={dashboard_water_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
                 </p>
                 <h3>Dashboard de analise de clima </h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -86,7 +86,7 @@ function Projetos() {
                 <video autoplay="autoplay" loop="loop" muted>
                     <source src={dashboard_wheather_vi} type="video/mp4"/>
                 </video>
-                    <button type="button" className="link_btn download"><a href={dashboard_wheather_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                    <button type="button" className="link-content download"><a href={dashboard_wheather_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
                 </p>
                 <h3>Barra de pesquisa dinâmica com sub-opções</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -95,21 +95,21 @@ function Projetos() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={search_bar_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Desenho técnico catapult de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                 Esse é um desenho em perspectiva para um projeto escolar de desenvolvimento de uma catapult de palitos de picolé e elásticos para competição. Após pronta, foi a catapult vencedora da competição, alcançando 7 metros de arremesso.
                     <img src={catapult_drawing_im}></img>
-                    <button type="button" className="link_btn download"><a href={catapult_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    <button type="button" className="link-content download"><a href={catapult_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
                 </p>
                 <h3>Desenho técnico ponte de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Esse é um desenho em perspectiva para outro projeto escolar de competição, porém, dessa vez uma ponte de palitos de picolé. A ponte suportou 22.5KG e cedeu devido ao entortamento lateral da estrutura.
                     <img src={bridge_drawing_im}></img>
-                    <button type="button" className="link_btn download"><a href={bridge_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    <button type="button" className="link-content download"><a href={bridge_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
                 </p>
                 <h3>Sistema de validação de segurança com tokens.</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -121,7 +121,7 @@ function Projetos() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={login_system_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Planilha automatizada de criação e formatação de fichas de referências bibliograficas</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -130,7 +130,7 @@ function Projetos() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={documentation_sheet_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn download"><a href={documentation_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de resgitro</span></a></button>
+                    <button type="button" className="link-content download"><a href={documentation_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de resgitro</span></a></button>
                 </p>
                 <h3>Este potifólio</h3>
                 <div className="subtitle-divisor divisor"></div>

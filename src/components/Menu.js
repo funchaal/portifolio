@@ -33,11 +33,11 @@ function ocMenu(open) {
 function Button(props) {
   if (props.type === 'social') {
     return (
-      <li onClick={() => window.innerWidth < 1200 && ocMenu(false)}><a href={props.href} rel="noreferrer" target="_blank"><img src={props.img} alt="" style={props.style}></img>{props.text}</a></li>
+      <button onClick={() => window.innerWidth < 1200 && ocMenu(false)}><a href={props.href} rel="noreferrer" target="_blank"><img src={props.img} alt="" style={props.style}></img>{props.text}</a></button>
     )
   } else {
     return (
-      <li onClick={() => { window.innerWidth < 1200 && ocMenu(false); document.querySelector('main').scrollTop = 0 }}><img src={props.img} alt="" style={props.style}></img>{props.text}</li>
+      <button onClick={() => { window.innerWidth < 1200 && ocMenu(false); document.querySelector('main').scrollTop = 0 }}><img src={props.img} alt="" style={props.style}></img>{props.text}</button>
       )
     }
 }
@@ -45,51 +45,51 @@ function Button(props) {
 function Menu() {
   return (
     <div id="menu_ctn">
-          <nav id="menu"  onMouseOver={() => window.innerWidth >= 1200 && ocMenu(true)} onMouseOut={() => window.innerWidth >= 1200 && ocMenu(false)}>
+          <div id="menu"  onMouseOver={() => window.innerWidth >= 1200 && ocMenu(true)} onMouseOut={() => window.innerWidth >= 1200 && ocMenu(false)}>
           <div className="header"></div>
-              <div className="body">
-                <div id="menu_icon_container">
-                  <ul>
+              <nav>
+                <div className="icon-ctn ctn">
+                  <div className="box">
                     <Link to="/"><Button img={home_ic}/></Link>
                     <Link to="/habilidades"><Button img={skills_ic}/></Link>
                     <Link to="/estudos"><Button img={studies_ic}/></Link>
                     <Link to="/formacao"><Button img={graduations_ic}/></Link>
                     <Link to="/objetivos"><Button img={goals_ic}/></Link>
-                    <Link className="off" to="/notas"><Button img={grades_ic}/></Link>
+                    <Link className="off-item" to="/notas"><Button img={grades_ic}/></Link>
                     <Link to="/projetos"><Button img={projects_ic}/></Link>
                     <Link to="/contato"><Button img={mail_ic}/></Link>
                     <div className="calcbro-divisor"></div>
                     <Link to="/calcbro"><Button img={calcbro_logo} style={{height: '20px'}}/></Link>
+                  </div>
                     <div className="box">
                         <Button type="social" href="https://www.linkedin.com/in/rafael-funchal/" img={linkedin_ic}/>
                         <Button type="social" href="https://www.facebook.com/funchaal" img={facebook_ic}/>
                         <Button type="social" href="https://www.instagram.com/rafaelfunchal_/" img={instagram_ic}/>
                         <Button type="social" href="https://twitter.com/funchaal_" img={twitter_ic}/>
                     </div>
-                  </ul>
                 </div>
-                <div id="menu_list_container">
-                  <ul>
+                <div className="list-ctn ctn">
+                  <div className="box">
                     <Link to="/"><Button img={home_ic} text="Home"/></Link>
                     <Link to="/habilidades"><Button img={skills_ic} text="Habilidades"/></Link>
                     <Link to="/estudos"><Button img={studies_ic} text="Estudos"/></Link>
                     <Link to="/formacao"><Button img={graduations_ic} text="Formação"/></Link>
                     <Link to="/objetivos"><Button img={goals_ic} text="Objetivos"/></Link>
-                    <Link className="off" to="/notas"><Button img={grades_ic} text="Notas"/></Link>
+                    <Link className="off-item" to="/notas"><Button img={grades_ic} text="Notas"/></Link>
                     <Link to="/projetos"><Button img={projects_ic} text="Projetos"/></Link>
                     <Link to="/contato"><Button img={mail_ic} text="Contato"/></Link>
                     <div className="calcbro-divisor"></div>
                     <Link to="/calcbro"><Button img={calcbro_logo} text="CalcBro" style={{height: '20px'}}/></Link>
+                  </div>
                     <div className="box">
                       <Button type="social" href="https://www.linkedin.com/in/rafael-funchal/" img={linkedin_ic} text="Linkedin"/>
                       <Button type="social" href="https://www.facebook.com/funchaal" img={facebook_ic} text="Facebook"/>
                       <Button type="social" href="https://www.instagram.com/rafaelfunchal_/" img={instagram_ic} text="Instagram"/>
                       <Button type="social" href="https://twitter.com/funchaal_" img={twitter_ic} text="Twitter"/>
                     </div>
-                  </ul>
                 </div>
-              </div>
-          </nav>
+              </nav>
+          </div>
         </div>
     )
 }

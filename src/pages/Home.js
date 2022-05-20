@@ -12,13 +12,13 @@ import cv from '../documents/Currículo - Rafael Funchal.pdf'
 function Home() {
 
   function mouseMv(e) {
-    const el = document.getElementById('choose_something')
+    const el = document.getElementById('cs_ctn')
     el.style.transitionDuration = '100ms'
     el.style.transform = `translate(${-(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))}px, ${-(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))}px)`
   }
 
   function mouseOt() {
-    const el = document.getElementById('choose_something')
+    const el = document.getElementById('cs_ctn')
     el.style.transitionDuration = '1000ms'
     el.style.transform = 'none'
   }
@@ -42,7 +42,7 @@ function Home() {
           </div>
           <div className="right side" style={{ justifyContent: 'center', paddingTop: '10vh' }}>
             <div></div>
-            <div id="choose_something">
+            <div id="cs_ctn">
               <span>Choo</span>
               <span>se</span>
               <span>Some</span>

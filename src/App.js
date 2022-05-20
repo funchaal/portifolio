@@ -41,7 +41,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div id="base">
       <Router>
           <main>
             <Routes>
