@@ -283,7 +283,7 @@ header {
   cursor: pointer;
   margin: 10px 0;
   border-radius: 15px;
-  background: inherit;
+  background: rgb(56, 56, 56);
   transition-duration: 200ms;
   box-shadow: none;
   font-size: 1em;
@@ -1696,17 +1696,12 @@ p.default > span {
     transform: translateX(-260px);
   }
 
+  #menu nav {
+    height: calc(100% - 50px)
+  }
+
   .icon-box {
     display: flex !important;
-  }
-
-  #menu.on .list-ctn, .icon-ctn.on ~ #menu .list-ctn {
-    transition-duration: 0ms;
-    transition-delay: 0ms;
-  }
-
-  .list-ctn {
-    transition-delay: 2s;
   }
 
   #menu .header {
@@ -1899,6 +1894,9 @@ p.default > span {
     background: rgb(37, 37, 37);
   }
   #menu {
+    background: rgb(70, 70, 70);
+  }
+  #menu .ctn button {
     background: rgb(70, 70, 70);
   }
   header {
