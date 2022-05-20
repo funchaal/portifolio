@@ -1,5 +1,7 @@
 import calcbro_il from '../images/illustrations/calcbro-il.svg'
 
+import github_ic from '../images/icons/github-ic.svg'
+
 import calcbro_overview_vi from '../videos/info/calcbro-overview-vi.mp4'
 import calcbro_overview_cellphone_vi from '../videos/info/calcbro-overview-cellphone-vi.mp4'
 import calcbro_login_cellphone_vi from '../videos/info/calcbro-login-cellphone-vi.mp4'
@@ -23,7 +25,7 @@ function Calcbro() {
                     </video>
                 </p>
                 <p className="default">
-                <button type="button" className="link-content github"><a href="github/" target="_blank"><span>Ver no GitHub</span></a></button>
+                <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Visão geral no celular</h3>
                 <div className="subtitle-divisor divisor"></div>
