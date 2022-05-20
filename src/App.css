@@ -283,7 +283,7 @@ header {
   cursor: pointer;
   margin: 10px 0;
   border-radius: 15px;
-  background: rgb(56, 56, 56);
+  background: inherit;
   transition-duration: 200ms;
   box-shadow: none;
   font-size: 1em;
@@ -1899,9 +1899,6 @@ p.default > span {
     background: rgb(37, 37, 37);
   }
   #menu {
-    background: rgb(70, 70, 70);
-  }
-  .icon-ctn button, .list-ctn button {
     background: rgb(70, 70, 70);
   }
   header {
