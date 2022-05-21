@@ -184,7 +184,7 @@ header {
 }
 
 .title-divisor {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 30px;
   animation: title-divisor 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 200ms;
 }
@@ -389,7 +389,7 @@ header {
   pointer-events: none;
   width: 18px;
   height: 2px;
-  border-radius: 10px;
+  border-radius: 2px;
   background-color: rgb(255, 255, 255);
   transform: none;
   transition-duration: 500ms;
@@ -1204,7 +1204,7 @@ p.default {
 
 p.default > img, p.default > video {
   position: relative;
-  max-width: 600px;
+  max-width: calc(100% - 70px);
   max-height: 500px;
   margin: 0 auto;
   margin-top: 40px;
@@ -1613,6 +1613,15 @@ p.default > span {
 
 @media (max-width: 1199px) {
 
+  h1 {
+    margin: 0 auto;
+  }
+
+  .title-divisor {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   button.link-content {
     margin-left: auto;
     margin-right: auto;
@@ -1698,6 +1707,21 @@ p.default > span {
 
   #menu nav {
     height: calc(100% - 50px)
+  }
+
+  #menu .ctn {
+    transition-duration: 0ms;
+    transition-delay: 400ms;
+  }
+  
+  #menu.on .ctn {
+    transition-delay: 0ms;
+  }
+
+  #menu .icon-ctn .calcbro-divisor {
+    visibility: hidden;
+    transition-duration: 0ms;
+    transition-delay: 0ms;
   }
 
   .icon-box {
