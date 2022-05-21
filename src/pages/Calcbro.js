@@ -25,7 +25,7 @@ function Calcbro() {
                     </video>
                 </p>
                 <p className="default">
-                <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Visão geral no celular</h3>
                 <div className="subtitle-divisor divisor"></div>

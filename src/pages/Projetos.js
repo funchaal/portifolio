@@ -35,10 +35,7 @@ function Projetos() {
                 <div className="title-divisor divisor"></div>
                 <p className="default">
                     <span>Os vídeo podem levar um tempo para carregar</span>
-                    Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins didáticos quanto para fins pessoais.
-                </p>
-                <p className="default">
-                    Abaixo listei alguns deles.
+                    Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins acadêmicos quanto para fins pessoais. Abaixo listei alguns deles.
                 </p>
                 <h3>Calcbro</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -52,7 +49,7 @@ function Projetos() {
                 <video autoplay="autoplay" loop="loop" muted>
                     <source src={calcbro_overview_vi} type="video/mp4"/>
                 </video>
-                <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Planilha automatizada de gerenciamento de atividades</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -95,7 +92,7 @@ function Projetos() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={search_bar_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts/public/javascript/modules/search_bar" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Desenho técnico catapult de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -114,14 +111,14 @@ function Projetos() {
                 <h3>Sistema de validação de segurança com tokens.</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
-                    Essa função é um sistema de login junto com a função "lembrar-me" com autenticação camuflada por meio de tokens de identificação que são atualizados à cada comunicação feita com o banco de dados.
+                    Essa função é um sistema de login e função "lembrar-me" com autenticação camuflada por meio de tokens de identificação que são atualizados à cada comunicação feita com o banco de dados.
                 </p>
                 <p className="default">
                     Esse sistema aumenta a segurança da conta, impedindo que sejam realizados ataques de força bruta, pois a cada interação é gerado um novo tokem para o usuário e caso a autenticação seja realizada por meio de cookies - por causa do "lembrar-me" - também é anexado um tokem de segurança à seção conectada.
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={login_system_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link-content github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/blob/main/scripts/app.js#L98" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Planilha automatizada de criação e formatação de fichas de referências bibliograficas</h3>
                 <div className="subtitle-divisor divisor"></div>
