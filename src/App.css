@@ -184,7 +184,7 @@ header {
 }
 
 .title-divisor {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 30px;
   animation: title-divisor 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 200ms;
 }
@@ -489,6 +489,7 @@ header {
 }
 
 #intro_title_ctn h1 {
+  margin: 0;
   font-size: 5.5em;
   line-height: 0.9em;
   opacity: 100%;
@@ -1644,6 +1645,7 @@ p.default > span {
   }
   
   #cv_ctn p {
+    font-size: 1.3em;
     margin: 20px 0 0 0;
   }
   
@@ -1905,6 +1907,9 @@ p.default > span {
 @media (max-width: 499px) {
   #cv_ctn {
     width: calc(100% - 40px);
+  }
+  #cv_ctn::before {
+    height: 4px;
   }
   main::-webkit-scrollbar {
     width: 0px;

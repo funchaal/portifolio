@@ -12,15 +12,19 @@ import cv from '../documents/Currículo - Rafael Funchal.pdf'
 function Home() {
 
   function mouseMv(e) {
-    const el = document.getElementById('cs_ctn')
-    el.style.transitionDuration = '100ms'
-    el.style.transform = `translate(${-(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))}px, ${-(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))}px)`
+    if (window.innerWidth > 1199) {
+      const el = document.getElementById('cs_ctn')
+      el.style.transitionDuration = '100ms'
+      el.style.transform = `translate(${-(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))}px, ${-(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))}px)`
+    }
   }
 
   function mouseOt() {
-    const el = document.getElementById('cs_ctn')
-    el.style.transitionDuration = '1000ms'
-    el.style.transform = 'none'
+    if (window.innerWidth > 1199) {
+      const el = document.getElementById('cs_ctn')
+      el.style.transitionDuration = '1000ms'
+      el.style.transform = 'none'
+    }
   }
 
     return (

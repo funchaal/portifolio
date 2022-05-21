@@ -31,7 +31,7 @@ function Projetos() {
     return (
         <div id="main_container">
             <div class="side left">
-                <h1 className="title">Projetos </h1>
+                <h1 className="title">Projetos</h1>
                 <div className="title-divisor divisor"></div>
                 <p className="default">
                     <span>Os vídeo podem levar um tempo para carregar</span>
