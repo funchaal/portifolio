@@ -185,7 +185,7 @@ header {
 
 .title-divisor {
   margin-top: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   animation: title-divisor 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 200ms;
 }
 
