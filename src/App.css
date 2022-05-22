@@ -1736,7 +1736,7 @@ p.default > span {
 
   #intro_title_ctn {
     margin-bottom: auto;
-    animation: fade-in 2000ms ease-out forwards 200ms;
+    animation: fade-in 1000ms ease-out forwards 200ms;
   }
 
   header {
