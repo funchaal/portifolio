@@ -197,7 +197,7 @@ header {
 .more-home-divisor {
   display: none;
   margin: 50px auto 25px auto;
-  animation: home-more-divisor-in 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 2200ms;
+  animation: home-more-divisor-in 500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 1200ms;
 }
 
 .formation-divisor {
@@ -1736,6 +1736,7 @@ p.default > span {
 
   #intro_title_ctn {
     margin-bottom: auto;
+    animation: fade-in 2000ms ease-out forwards 200ms;
   }
 
   header {
@@ -1833,7 +1834,7 @@ p.default > span {
   }
   #intro_title_ctn .more p {
     opacity: 0;
-    animation: fade-in-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 2500ms;
+    animation: fade-in-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 1500ms;
   }
   #intro_title_ctn .more p.hide {
     max-height: unset;
