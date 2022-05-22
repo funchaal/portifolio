@@ -1646,7 +1646,7 @@ p.default > span {
   
   #cv_ctn p {
     font-size: 1.3em;
-    margin: 20px 0 0 0;
+    margin: 20px 5px 0 5px;
   }
   
     #cv_ctn button {
@@ -1736,7 +1736,7 @@ p.default > span {
 
   #intro_title_ctn {
     margin-bottom: auto;
-    animation: fade-in 1000ms ease-out forwards 200ms;
+    animation: fade-in 2000ms ease-out forwards 200ms;
   }
 
   header {

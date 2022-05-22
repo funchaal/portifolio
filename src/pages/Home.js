@@ -34,7 +34,7 @@ function Home() {
               <div id="intro_title_box">
                 <h1>Rafael <br></br>Funchal</h1>
                 <div className="home-divisor"></div>
-                <h2>Técnico em Comércio Exterior, <br></br>Desenvolvedor Web, <br></br>Estudante de Ciência de Dados.</h2>
+                <h2>Desenvolvedor Web, <br></br>Técnico em Comércio Exterior, <br></br>Estudante de Ciência de Dados.</h2>
               </div>
               <div className="divisor more-home-divisor"></div>
             <div className="more">
