@@ -1,5 +1,7 @@
 import grades_il from '../images/illustrations/grades-il.svg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Notas() {
     return (
         <div id="main_container">
@@ -12,6 +14,7 @@ function Notas() {
                 <p className="default">
                 Etiam aliquet, purus in fringilla pellentesque, magna magna imperdiet dolor, sit amet suscipit dolor nibh eu orci. Suspendisse tempus quis ligula ac rhoncus. Aenean pretium gravida tellus, at ornare orci cursus eu. Nunc ut urna justo. Nam sit amet tempor urna, vel efficitur turpis. Pellentesque in dignissim lorem, nec finibus arcu. Vestibulum id facilisis diam. Phasellus mollis feugiat eros quis ultrices. Sed elit neque, rutrum eu ante sit amet, pharetra egestas augue. Maecenas ullamcorper laoreet elit, sit amet vulputate nisl ullamcorper non. Sed in mi posuere, vestibulum risus sed, aliquam urna. In ultrices turpis et semper commodo. Suspendisse vehicula pulvinar purus, sit amet sodales quam posuere in. Praesent sit amet accumsan lacus. Cras scelerisque leo sed nibh suscipit eleifend. Donec fringilla erat egestas eros volutpat, sit amet pellentesque purus egestas.
                 </p>
+                <FollowTo name="notas"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

@@ -17,6 +17,8 @@ import x_ic from '../images/icons/x-ic.svg'
 import hand_ic from '../images/icons/hand-ic.svg'
 import loading_ic from '../images/icons/loading-ic.svg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Contato() {
 
     const [submitable, setSubmitable] = useState(true)
@@ -126,6 +128,7 @@ function Contato() {
                     </div>
                     <button type="submit"><span>Enviar </span><img src={loading_ic} className="loading"></img></button>
                 </form>
+                <FollowTo name="contato"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

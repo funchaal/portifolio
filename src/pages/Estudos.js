@@ -10,6 +10,8 @@ import comex_course_im from '../images/info/comex-course-im.jpg'
 import music_art_im from '../images/info/music-art-im.jpg'
 import rocket_drawing_im from '../images/info/rocket-drawing-im.jpg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Estudos() {
     return (
         <div id="main_container">
@@ -41,6 +43,7 @@ function Estudos() {
                     <img src={flower_art_im}></img>
                     <img src={music_art_im}></img>
                 </p>
+                <FollowTo name="estudos"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

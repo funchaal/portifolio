@@ -9,6 +9,8 @@ import small_arrow_gradient from '../images/icons/small-arrow-gradient.svg'
 //Documents
 import cv from '../documents/Currículo - Rafael Funchal.pdf'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Home() {
 
   function mouseMv(e) {
@@ -64,6 +66,7 @@ function Home() {
                 <img src={small_arrow_gradient}></img>
               </Link>
             </button>
+            <FollowTo name="home" type="home"/>
         </div>
     )
 }

@@ -1,6 +1,8 @@
 //Illustrations
 import goals_il from '../images/illustrations/goals-il.svg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Objetivos() {
     return (
         <div id="main_container">
@@ -16,6 +18,7 @@ function Objetivos() {
                 <p className="default">
                     No entanto, como estou à procura do meu primeiro emprego, estou aberto às diversas as propostas.
                 </p>
+                <FollowTo name="objetivos"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

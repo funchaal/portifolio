@@ -10,6 +10,8 @@ import english_ce from '../documents/certificates/certificado-Inglês.pdf'
 import jungle_ce from '../documents/certificates/certificado-Selva.pdf'
 import ibpm_ce from '../documents/certificates/certificado-IBPM.pdf'
 
+import FollowTo from '../components/FollowTo.js'
+
 function graduations() {
     return (
         <div id="main_container">
@@ -120,6 +122,7 @@ function graduations() {
                     <span className="school">IBPM / Citi</span>
                     <a href={jungle_ce} target="_blank" className="certificate">Ver certificado</a>
                 </div>
+                <FollowTo name="formação"/>
             </div>
             <div className="side right">
             <div className="illustration_ctn">

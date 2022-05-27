@@ -6,6 +6,8 @@ import calcbro_overview_vi from '../videos/info/calcbro-overview-vi.mp4'
 import calcbro_overview_cellphone_vi from '../videos/info/calcbro-overview-cellphone-vi.mp4'
 import calcbro_login_cellphone_vi from '../videos/info/calcbro-login-cellphone-vi.mp4'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Calcbro() {
     return (
         <div id="main_container">
@@ -43,6 +45,7 @@ function Calcbro() {
                         <source src={calcbro_login_cellphone_vi} type="video/mp4"/>
                     </video>
                 </p>
+                <FollowTo name="calcBro"/>
             </div>
             <div class="side right">
             <div className="illustration_ctn">

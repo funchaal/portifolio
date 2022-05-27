@@ -1,6 +1,8 @@
 //Ilustrations
 import skills_il from '../images/illustrations/skills-il.svg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Habilidades() {
     return (
         <div id="main_container">
@@ -18,6 +20,7 @@ function Habilidades() {
                 </p>
                 <p className="default" style={{ wordBreak: 'auto' }}>
                 </p>
+                <FollowTo name="habilidades"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

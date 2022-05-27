@@ -27,6 +27,8 @@ import documentation_sheet_fi from '../documents/Documentation Sheet.xlsm'
 import catapult_fi from '../documents/Catapult Model.dwg'
 import bridge_fi from '../documents/Bridge Model.dwg'
 
+import FollowTo from '../components/FollowTo.js'
+
 function Projetos() {
     return (
         <div id="main_container">
@@ -94,7 +96,7 @@ function Projetos() {
                     </video>
                     <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts/public/javascript/modules/search_bar" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
-                <h3>Desenho técnico catapult de palitos</h3>
+                <h3>Desenho técnico catapulta de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                 Esse é um desenho em perspectiva para um projeto escolar de desenvolvimento de uma catapult de palitos de picolé e elásticos para competição. Após pronta, foi a catapult vencedora da competição, alcançando 7 metros de arremesso.
@@ -108,7 +110,7 @@ function Projetos() {
                     <img src={bridge_drawing_im}></img>
                     <button type="button" className="link-content download"><a href={bridge_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
                 </p>
-                <h3>Sistema de validação de segurança com tokens.</h3>
+                <h3>Sistema de validação de segurança com tokens</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Essa função é um sistema de login e função "lembrar-me" com autenticação camuflada por meio de tokens de identificação que são atualizados à cada comunicação feita com o banco de dados.
@@ -140,6 +142,7 @@ function Projetos() {
                         <source src={portifolio_vi} type="video/mp4"/>
                     </video>
                 </p>
+                <FollowTo name="projetos"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">
