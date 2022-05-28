@@ -1964,9 +1964,6 @@ p.default > span {
   #follow_to.home {
     margin-left: 0;
   }
-  #follow_to.home span {
-    margin-left: 20px;
-  }
   #cv_ctn {
     width: calc(100% - 40px);
   }

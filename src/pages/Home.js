@@ -30,10 +30,20 @@ function Home() {
     }
   }
 
+  function windowRz () {
+    try {
+      const width = `${document.getElementById('intro_title_ctn').offsetWidth}px`
+      document.getElementById('cv_ctn').style.maxWidth = width
+      document.getElementById('follow_to').style.maxWidth = width
+    } catch (error) {
+      window.removeEventListener('resize', windowRz)
+    }
+  }
+
+  window.addEventListener('resize', windowRz)
+
   useEffect(() => {
-    const width = `${document.getElementById('intro_title_ctn').offsetWidth}px`
-    document.getElementById('cv_ctn').style.maxWidth = width
-    document.getElementById('follow_to').style.maxWidth = width
+    windowRz()
   }, [])
 
     return (
