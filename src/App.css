@@ -1496,12 +1496,12 @@ p.default > span {
 
 #follow_to {
   width: 100%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #follow_to.home {
   display: none;
-  margin: 20px 0 50px 80px;
+  width: calc(100% - 80px);
 }
 
 #follow_to span {
@@ -1520,7 +1520,7 @@ p.default > span {
 #follow_to .box {
   width: 300px;
   padding: 5px;
-  margin: 20px 0 0 30px;
+  margin: 20px 0 0 40px;
   border-radius: 15px;
   background-color: rgb(56, 56, 56);
 }
@@ -1665,7 +1665,9 @@ p.default > span {
 }
 
 @media (max-width: 1199px) {
-
+  #follow_to.home {
+    display: block;
+  }
   h1 {
     margin: 0 auto;
   }
@@ -1878,9 +1880,6 @@ p.default > span {
 }
 
 @media (max-width: 700px) {
-  #follow_to.home {
-    display: block;
-  }
   #intro_title_ctn button {
     display: none;
   }
@@ -1962,6 +1961,12 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  #follow_to.home {
+    margin-left: 0;
+  }
+  #follow_to.home span {
+    margin-left: 20px;
+  }
   #cv_ctn {
     width: calc(100% - 40px);
   }
@@ -1984,6 +1989,9 @@ p.default > span {
   }
   #menu .ctn button {
     background: rgb(70, 70, 70);
+  }
+  #follow_to.home {
+    width: 100%;
   }
   #follow_to .box {
     background-color: rgb(70, 70, 70);

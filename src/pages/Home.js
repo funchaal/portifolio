@@ -10,6 +10,7 @@ import small_arrow_gradient from '../images/icons/small-arrow-gradient.svg'
 import cv from '../documents/Currículo - Rafael Funchal.pdf'
 
 import FollowTo from '../components/FollowTo.js'
+import { useEffect } from 'react'
 
 function Home() {
 
@@ -28,6 +29,12 @@ function Home() {
       el.style.transform = 'none'
     }
   }
+
+  useEffect(() => {
+    const width = `${document.getElementById('intro_title_ctn').offsetWidth}px`
+    document.getElementById('cv_ctn').style.maxWidth = width
+    document.getElementById('follow_to').style.maxWidth = width
+  }, [])
 
     return (
         <div id="main_container" onMouseMove={mouseMv} onMouseOut={mouseOt}>
@@ -58,15 +65,15 @@ function Home() {
               <p>Este site foi desenvolvido especialmente por mim com o objetivo de partilhar meus conhecimentos e experiências de forma mais dinâmica, porém, se optar por um resumo em PDF, basta clicar do botão abaixo para acessá-lo.</p>
               <button><a href={cv} target="_blank" type="application/pdf"><img src={pdf_ic} alt=""></img></a></button>
             </div>
+            <FollowTo name="home" type="home"/>
           </div>
-            <button class="home-contact" onClick={() => document.querySelector('main').scrollTop = 0}>
+            <button className="home-contact" onClick={() => document.querySelector('main').scrollTop = 0}>
               <Link to="/contato">
                 <img src={contact_ic}></img>
                 <span>Contato</span>
                 <img src={small_arrow_gradient}></img>
               </Link>
             </button>
-            <FollowTo name="home" type="home"/>
         </div>
     )
 }
