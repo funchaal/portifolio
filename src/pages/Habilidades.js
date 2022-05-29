@@ -14,6 +14,7 @@ function Habilidades() {
                 <div className="title-divisor divisor"></div>
                 <ItemBox items="lógica, criatividade, análise exploratória, resolução de problemas, programação, desenho CAD, modelagem 3D, photoshop"/>
                 <p className="default">
+                <div className="divisor more-home-divisor" style={{ margin: '5px 0 15px 0', animationDelay: '2200ms' }}></div>
                     Como sempre tive extremo gosto pela área da técnologia, passei praticamente minha vida me decicando aos estudos na área e desenvolvendo projetos pessoais como programas, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, portanto, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação e manipulação de dados até modelagem 3D e animação.
                 </p>
                 <p className="default">

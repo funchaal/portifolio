@@ -822,7 +822,7 @@ header .home-contact img:last-child {
   opacity: 0;
   width: max-content;
   transform: translateX(-20px);
-  transition-duration: 800ms;
+  transition-duration: 1000ms;
   transition-timing-function: ease-out;
 }
 
@@ -2023,7 +2023,7 @@ p.default > span {
     padding-right: 20px !important;
   }
   body {
-    background: rgb(37, 37, 37);
+    background: rgb(35, 35, 35);
   }
   #menu {
     background: rgb(70, 70, 70);
@@ -2042,7 +2042,7 @@ p.default > span {
     background-color: rgb(70, 70, 70);
   }
   header {
-    background-color: rgba(37, 37, 37, 0.9);
+    background-color: rgba(35, 35, 35, 0.9);
     width: 100%;
   }
   button {

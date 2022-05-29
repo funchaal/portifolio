@@ -11,7 +11,7 @@ function ItemBox(props) {
         let timer = 1000
         document.querySelectorAll('.item-box span').forEach(el => {
             setTimeout(() => el.classList.add('on'), timer)
-            timer += 50
+            timer += 80
         })
     }, [])
 
