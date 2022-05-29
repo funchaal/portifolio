@@ -3,12 +3,16 @@ import skills_il from '../images/illustrations/skills-il.svg'
 
 import FollowTo from '../components/FollowTo.js'
 
+import small_arrow_gradient from '../images/icons/small-arrow-gradient.svg'
+import ItemBox from '../components/ItemBox'
+
 function Habilidades() {
     return (
         <div id="main_container">
             <div class="side left">
                 <h1 className="title">Habilidades </h1>
                 <div className="title-divisor divisor"></div>
+                <ItemBox items="lógica, criatividade, análise exploratória, resolução de problemas, programação, desenho CAD, modelagem 3D, photoshop"/>
                 <p className="default">
                     Como sempre tive extremo gosto pela área da técnologia, passei praticamente minha vida me decicando aos estudos na área e desenvolvendo projetos pessoais como programas, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, portanto, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação e manipulação de dados até modelagem 3D e animação.
                 </p>

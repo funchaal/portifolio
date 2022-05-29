@@ -800,6 +800,46 @@ header .home-contact img:last-child {
   font-style: italic;
 }
 
+.item-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.item-box span {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 5px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(87, 87, 87);
+  background-color: rgb(42, 42, 42);
+  font-size: 1.2em;
+  opacity: 0;
+  width: max-content;
+  transform: translateX(-20px);
+  transition-duration: 800ms;
+  transition-timing-function: ease-out;
+}
+
+.item-box span::first-letter {
+  text-transform: uppercase;
+}
+
+.item-box span.on {
+  opacity: 100%;
+  transform: none;
+}
+
+.item-box img {
+  height: 12px;
+  margin-right: 10px;
+}
+
 #cs_ctn {
   margin: 0 auto;
   opacity: 0;
@@ -1961,6 +2001,10 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  .item-box span {
+    border: 1px solid rgb(96, 96, 96);
+    background-color: rgb(53, 53, 53);
+  }
   #follow_to.home {
     margin-left: 0;
   }
