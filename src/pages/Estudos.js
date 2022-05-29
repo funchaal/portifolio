@@ -11,6 +11,7 @@ import music_art_im from '../images/info/music-art-im.jpg'
 import rocket_drawing_im from '../images/info/rocket-drawing-im.jpg'
 
 import FollowTo from '../components/FollowTo.js'
+import ItemBox from '../components/ItemBox.js'
 
 function Estudos() {
     return (
@@ -18,6 +19,7 @@ function Estudos() {
             <div class="side left">
                 <h1 className="title">Estudos </h1>
                 <div className="title-divisor divisor"></div>
+                <ItemBox items="data science, excel, machine learning, redes neurais, visualização gráfica, banco de dados, react, autoCAD, photoshop, illustrator"/>
                 <p className="default">
                     Estou cursando o ensino médio na Etec Alberto Santos Dumont e como já citei, sou formado técnico em Comércio Exterior pela Etec Dona Escolástica Rosa, em Santos. Lá foi meu primeiro contato real com o mercado de trabalho e os sistemas portuários, como processos de importação, exportação e logística.
                     <img src={comex_course_im}></img>
