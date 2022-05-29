@@ -33,7 +33,7 @@ function FollowTo(props) {
 
     keys.splice(index, 1)
 
-    function pageUp() {
+    function pageUp(e) {
         const main = document.querySelector('main')
         main.scrollTop = 0
     }

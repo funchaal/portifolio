@@ -29,7 +29,7 @@ import bridge_fi from '../documents/Bridge Model.dwg'
 
 import FollowTo from '../components/FollowTo.js'
 
-function Projetos() {
+function Projetos(props) {
     return (
         <div id="main_container">
             <div class="side left">

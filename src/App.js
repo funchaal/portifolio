@@ -1,6 +1,7 @@
 import './App.css'
 import ReactDOM from 'react-dom'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 
 import Header from './components/Header'
 
@@ -39,7 +40,7 @@ function App() {
       document.getElementById('menu_icon').classList.remove('on')
     }
   }
-
+  
   return (
     <div id="base">
       <Router>

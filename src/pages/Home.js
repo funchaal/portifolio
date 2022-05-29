@@ -12,7 +12,7 @@ import cv from '../documents/Currículo - Rafael Funchal.pdf'
 import FollowTo from '../components/FollowTo.js'
 import { useEffect } from 'react'
 
-function Home() {
+function Home(props) {
 
   function mouseMv(e) {
     if (window.innerWidth > 1199) {

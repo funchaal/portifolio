@@ -822,7 +822,7 @@ header .home-contact img:last-child {
   font-size: 1.2em;
   opacity: 0;
   width: max-content;
-  transform: translateX(-20px);
+  transform: translate(-20px, -4px);
   transition-duration: 1000ms;
   transition-timing-function: ease-out;
 }

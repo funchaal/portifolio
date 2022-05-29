@@ -4,13 +4,13 @@ import goals_il from '../images/illustrations/goals-il.svg'
 import FollowTo from '../components/FollowTo.js'
 import ItemBox from '../components/ItemBox.js'
 
-function Objetivos() {
+function Objetivos(props) {
     return (
         <div id="main_container">
             <div class="side left">
                 <h1 className="title">Objetivos </h1>
                 <div className="title-divisor divisor"></div>
-                <ItemBox items="mercado de trabalho, ciência de dados, engrenharia de software, engenharia da computação, engenharia mecânica"/>
+                <ItemBox items="mercado de trabalho, ciência de dados, engenharia de software, engenharia da computação, engenharia mecânica"/>
                 <p className="default">
                     Meu objetivo principal é ingressar no mercado de trabalho o mais breve possível para desenvolver e por em prática os conhecimentos que adquiri ao longo dos anos, além de ter a experiência de aplicá-los num ambiente profissional e me desenvolver no mercado de trabalho.
                 </p>

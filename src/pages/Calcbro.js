@@ -8,7 +8,7 @@ import calcbro_login_cellphone_vi from '../videos/info/calcbro-login-cellphone-v
 
 import FollowTo from '../components/FollowTo.js'
 
-function Calcbro() {
+function Calcbro(props) {
     return (
         <div id="main_container">
             <div class="side left">
@@ -25,9 +25,7 @@ function Calcbro() {
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={calcbro_overview_vi} type="video/mp4"/>
                     </video>
-                </p>
-                <p className="default">
-                <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
                 </p>
                 <h3>Visão geral no celular</h3>
                 <div className="subtitle-divisor divisor"></div>

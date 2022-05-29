@@ -5,10 +5,10 @@ import FollowTo from '../components/FollowTo.js'
 
 import ItemBox from '../components/ItemBox.js'
 
-function Habilidades() {
+function Habilidades(props) {
     return (
         <div id="main_container">
-            <div class="side left">
+            <div className="side left">
                 <h1 className="title">Habilidades </h1>
                 <div className="title-divisor divisor"></div>
                 <ItemBox items="lógica, criatividade, inglês, análise exploratória, resolução de problemas, programação, desenho CAD, modelagem 3D, photoshop"/>

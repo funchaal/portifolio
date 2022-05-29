@@ -19,7 +19,7 @@ import loading_ic from '../images/icons/loading-ic.svg'
 
 import FollowTo from '../components/FollowTo.js'
 
-function Contato() {
+function Contato(props) {
 
     const [submitable, setSubmitable] = useState(true)
 

@@ -13,7 +13,7 @@ import rocket_drawing_im from '../images/info/rocket-drawing-im.jpg'
 import FollowTo from '../components/FollowTo.js'
 import ItemBox from '../components/ItemBox.js'
 
-function Estudos() {
+function Estudos(props) {
     return (
         <div id="main_container">
             <div class="side left">

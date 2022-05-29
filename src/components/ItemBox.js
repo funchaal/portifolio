@@ -5,7 +5,6 @@ import correct_ic from '../images/icons/correct-ic.svg'
 function ItemBox(props) {
 
     const items = props.items.split(', ')
-    console.log(items)
     
     useEffect(() => {
         let timer = 1000

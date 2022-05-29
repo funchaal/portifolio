@@ -37,7 +37,7 @@ function Button(props) {
     )
   } else {
     return (
-      <button onClick={() => { window.innerWidth < 1200 && ocMenu(false); document.querySelector('main').scrollTop = 0 }}><img src={props.img} alt="" style={props.style}></img>{props.text}</button>
+      <button className="menu-option" onClick={() => { window.innerWidth < 1200 && ocMenu(false); document.querySelector('main').scrollTop = 0 }}><img src={props.img} alt="" style={props.style}></img>{props.text}</button>
       )
     }
 }
