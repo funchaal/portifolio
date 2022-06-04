@@ -809,6 +809,7 @@ header .home-contact img:last-child {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 100%;
+  margin-bottom: 10px;
 }
 
 .item-box span {
@@ -1413,11 +1414,11 @@ p.default > span {
 }
 
 #contact_form button[type="submit"] {
-  width: 150px;
+  width: 160px;
   height: 35px;
   margin-top: 25px;
   border-radius: 15px;
-  background-image: linear-gradient(to bottom right, rgb(199, 0, 199), rgb(0, 47, 255));
+  background-image: linear-gradient(to left, rgb(199, 0, 199), rgb(0, 47, 255));
   align-self: flex-end;
   transition-duration: 200ms;
 }
@@ -1577,6 +1578,7 @@ p.default > span {
   font-size: 1em;
   background-color: rgb(56, 56, 56);
   box-shadow: none;
+  text-transform: capitalize;
 }
 
 #follow_to button img {

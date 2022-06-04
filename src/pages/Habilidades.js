@@ -11,7 +11,7 @@ function Habilidades(props) {
             <div className="side left">
                 <h1 className="title">Habilidades </h1>
                 <div className="title-divisor divisor"></div>
-                <ItemBox items="lógica, criatividade, inglês, análise exploratória, resolução de problemas, programação, desenho CAD, modelagem 3D, photoshop"/>
+                <ItemBox items="lógica, excel, inglês, análise exploratória, resolução de problemas, programação, desenho CAD, modelagem 3D, photoshop"/>
                 <p className="default">
                     Como sempre gostei muito de tecnologia, passei praticamente minha vida me decicando aos estudos na área e desenvolvi diverosos projetos pessoais e acadêmicos como programas, dashboards, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, portanto, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação e análise gráfica até modelagem 3D e animação.
                 </p>
