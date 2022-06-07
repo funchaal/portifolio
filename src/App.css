@@ -1568,6 +1568,7 @@ p.default > span {
   margin: 20px 0 0 40px;
   border-radius: 15px;
   background-color: rgb(56, 56, 56);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 #follow_to button {
