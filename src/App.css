@@ -145,6 +145,7 @@ header {
   width: 100%;
   height: max-content;
   min-height: 700px;
+  transition-duration: 500ms;
 }
 
 .side {
@@ -307,6 +308,7 @@ header {
 
 #menu .ctn button img {
   pointer-events: none;
+  transition-duration: 200ms;
 }
 
 #menu .icon-ctn button img {
@@ -550,7 +552,8 @@ header {
   float: right;
   align-self: flex-end;
   border-radius: 15px;
-  background: linear-gradient(to bottom right, red, blue);
+  /* background: linear-gradient(to bottom right, red, blue); */
+  background-image: linear-gradient(to left, rgb(199, 0, 199), rgb(0, 47, 255));
   transition-duration: 1000ms;
   transition-timing-function: ease-out;
 }

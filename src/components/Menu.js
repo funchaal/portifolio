@@ -45,7 +45,7 @@ function Button(props) {
 function Menu() {
   return (
     <div id="menu_ctn">
-          <div id="menu"  onMouseOver={() => window.innerWidth >= 1200 && ocMenu(true)} onMouseOut={() => window.innerWidth >= 1200 && ocMenu(false)}>
+          <div id="menu" onMouseOver={() => window.innerWidth >= 1200 && ocMenu(true)} onMouseOut={() => window.innerWidth >= 1200 && ocMenu(false)}>
           <div className="header"></div>
               <nav>
                 <div className="icon-ctn ctn">
