@@ -1718,14 +1718,14 @@ p.default > span {
   #follow_to.home {
     display: block;
   }
-  /* h1 {
+  h1 {
     margin: 0 auto;
   }
 
   .title-divisor {
     margin-left: auto;
     margin-right: auto;
-  } */
+  }
 
   button.link-content {
     margin-left: auto;
