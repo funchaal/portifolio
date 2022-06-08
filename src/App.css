@@ -304,6 +304,7 @@ header {
 #menu .list-ctn button {
   width: 100%;
   height: 40px;
+  padding-left: 10px;
 }
 
 #menu .ctn button img {
@@ -320,6 +321,7 @@ header {
   align-self: flex-start;
   width: 20px;
   margin-left: 10px;
+  left: 0;
 }
 
 #menu .ctn button a {
@@ -586,6 +588,32 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+#header_contact .location::after, .contact-box.location::after {
+  position: absolute;
+  top: calc(100%);
+  left: calc(100% - 25px);
+  content: 'Clique para abrir o mapa';
+  white-space: nowrap;
+  font-size: 0.8em;
+  transition-duration: 200ms;
+}
+
+.contact-box.location::after {
+  top: calc(100%);
+  left: calc(100% - 25px);
+}
+
+#header_contact .location::after {
+  top: calc(100% + 10px);
+  left: unset;
+  right: calc(100% - 70px);
+}
+
+#header_contact .location.on::after, .contact-box.location.on::after {
+  visibility: 0;
+  opacity: 0;
 }
 
 #header_contact .location, .contact-box.location {
