@@ -75,7 +75,7 @@ function Contato(props) {
             <div class="side left">
                 <h1 className="title">Contato </h1>
                 <div className="title-divisor divisor"></div>
-                <p className="default" style={{ textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
                 <div className="contact-box">
                     <a href="mailto:rafael.funchal@outlook.com" target="_blank">
                         <img src={mail_ic}></img>
@@ -83,7 +83,7 @@ function Contato(props) {
                     </a>
                     <img src={clipboard_ic}></img>
                 </div>
-                <p className="default" style={{ textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
                 <div className="contact-box">
                     <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
                         <img src={whatsapp_ic}></img>
@@ -91,7 +91,7 @@ function Contato(props) {
                     </a>
                     <img src={clipboard_ic}></img>
                 </div>
-                <p className="default" style={{ textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
                 <div className="contact-box">
                     <a href="tel:+5513981235835" target="_blank">
                         <img src={cellphone_ic}></img>

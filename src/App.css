@@ -1544,7 +1544,7 @@ p.default > span {
 
 #follow_to {
   width: 100%;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 #follow_to.home {
@@ -1718,14 +1718,14 @@ p.default > span {
   #follow_to.home {
     display: block;
   }
-  h1 {
+  /* h1 {
     margin: 0 auto;
   }
 
   .title-divisor {
     margin-left: auto;
     margin-right: auto;
-  }
+  } */
 
   button.link-content {
     margin-left: auto;
@@ -2011,6 +2011,10 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  button:hover {
+    filter: none;
+    transform: none !important;
+  }
   .item-box span {
     border: 1px solid rgb(96, 96, 96);
     background-color: rgb(53, 53, 53);

@@ -21,11 +21,11 @@ function App() {
 
   window.onresize = () => {
     const sb_form = document.getElementById('search_bar_form')
-    if (window.innerWidth < 1200 && window.innerWidth > 550) {
+    if (window.innerWidth < 1200) {
       if (sb_form.style.display === 'flex') {
         sb_form.style.display = 'none'
       }
-    } else if (window.innerWidth > 550) {
+    } else if (window.innerWidth >= 1200) {
       sb_form.style.display = 'flex'
     } else {
       document.getElementById('menu').classList.remove('on')
