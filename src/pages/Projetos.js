@@ -36,7 +36,6 @@ function Projetos(props) {
                 <h1 className="title">Projetos</h1>
                 <div className="title-divisor divisor"></div>
                 <p className="default">
-                    <span>Os vídeo podem levar um tempo para carregar</span>
                     Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins acadêmicos quanto para fins pessoais. Abaixo listei alguns deles.
                 </p>
                 <h3>Calcbro</h3>
