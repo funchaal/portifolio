@@ -15,7 +15,7 @@
 }
 
 :root {
-  --bg-pc: rgb(24, 24, 24);
+  --bg-pc: a, 24);
   --bg-mb: rgb(37, 37, 37);
   --main-blue: rgb(0, 174, 255);
   --main-text-color: rgb(231, 231, 231);
@@ -30,7 +30,7 @@ html, #root, #base, body, main {
 }
 
 body {
-  background: rgb(24, 24, 24);
+  background: rgba(24, 24, 24);
   overflow: hidden;
 }
 
@@ -2065,7 +2065,7 @@ p.default > span {
     padding-right: 20px !important;
   }
   body {
-    background: rgb(35, 35, 35);
+    background: rgba(35, 35, 35);
   }
   #menu {
     background: rgb(70, 70, 70);
