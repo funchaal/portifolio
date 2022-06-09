@@ -1103,13 +1103,18 @@ select:-webkit-autofill:focus {
 
 #search_bar_form button[type="submit"] img {
   position: absolute;
-  width: 12px;
   margin-right: 3px;
   transition-duration: 300ms;
 } /* ok */
 
+#search_bar_form button[type="submit"] img:nth-child(1) {
+  width: 12px;
+}
+
 #search_bar_form button[type="submit"] img:nth-child(2) {
   transform: rotate(-180deg);
+  height: 10px;
+  margin-left: 3px;
   opacity: 0;
   visibility: hidden;
 } /* ok */
