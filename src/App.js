@@ -19,18 +19,19 @@ function App() {
 
   document.title = 'Portifólio - Rafael Funchal'
 
+  let innerSizes = [window.innerWidth, window.innerHeight]
+
   window.onresize = () => {
     const sb_form = document.getElementById('search_bar_form')
     if (window.innerWidth < 1200) {
-      if (sb_form.style.display === 'flex') {
-        sb_form.style.display = 'none'
-      }
+      if (window.innerWidth !== innerSizes[0]) sb_form.style.display = 'none'
     } else if (window.innerWidth >= 1200) {
       sb_form.style.display = 'flex'
     } else {
       document.getElementById('menu').classList.remove('on')
       document.getElementById('menu_icon').classList.remove('on')
     }
+    innerSizes = [window.innerWidth, window.innerHeight]
   }
 
   window.onclick = (e) => {
