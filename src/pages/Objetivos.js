@@ -10,15 +10,18 @@ function Objetivos(props) {
             <div class="side left">
                 <h1 className="title">Objetivos </h1>
                 <div className="title-divisor divisor"></div>
-                <ItemBox items="mercado de trabalho, ciência de dados, engenharia de software, engenharia da computação, engenharia mecânica"/>
+                <ItemBox items="mercado de trabalho, ciência de dados, engenharia da computação, IME, engenharia de software, engenharia mecânica, PF"/>
                 <p className="default">
-                    Meu objetivo principal é ingressar no mercado de trabalho o mais breve possível para desenvolver e por em prática os conhecimentos que adquiri ao longo dos anos, além de ter a experiência de aplicá-los num ambiente profissional e me desenvolver no mercado de trabalho.
+                    Meu objetivo principal é ingressar em uma universidade e me desenvolver no mercado, adquirindo experiência e explorando os conhecimentos que obtive ao longo dos anos num ambiente profissional.
                 </p>
                 <p className="default">
-                    Após o Ensino Médio busco cursar engenharia de software, engenharia da computação, ou até mesmo - fugindo do escopo - engenharia mecânica, que são as áreas que mais me destaco. Pretendo atuar na área da programação e ciência de dados, embora possa inclusive, iniciar na área de comércio exterior, no qual tenho formação técnica, ou em alguma outra área relacionada.
+                    Após o Ensino Médio busco cursar engenharia da computação, engenharia de software, ou até mesmo - fugindo do escopo - engenharia mecânica, que são as áreas que mais me destaco. Pretendo atuar na área da programação e ciência de dados, embora possa inclusive, iniciar na área de comércio exterior, no qual tenho formação técnica, ou em alguma outra área relacionada.
                 </p>
                 <p className="default">
-                    No entanto, como estou à procura do meu primeiro emprego, estou aberto às diversas as propostas.
+                    Pretendo me preparar durante esse período para tentar ingressar no IME e prestar vestibular para a polícia federal após a graduação, já que é exigido uma graduação para o concurso.
+                </p>
+                <p className="default">
+                    No entanto, por ora, estou em busca de desenvolver meu perfil profissional, portanto, estou aberto à diversas propostas.
                 </p>
                 <FollowTo name="objetivos"/>
             </div>

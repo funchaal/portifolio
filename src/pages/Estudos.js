@@ -19,7 +19,7 @@ function Estudos(props) {
             <div class="side left">
                 <h1 className="title">Estudos </h1>
                 <div className="title-divisor divisor"></div>
-                <ItemBox items="data science, excel, machine learning, redes neurais, visualização gráfica, banco de dados, react, autoCAD, inglês, photoshop"/>
+                <ItemBox items="data science, excel, machine learning, redes neurais, visualização gráfica, react, autoCAD, inglês, photoshop, banco de dados"/>
                 <p className="default">
                     Estou cursando o ensino médio na Etec Alberto Santos Dumont e como já me apresentei, sou formado técnico em Comércio Exterior pela Etec Dona Escolástica Rosa, em Santos. Lá foi meu primeiro contato real com o mercado de trabalho e os sistemas portuários, como processos de importação, exportação e logística.
                     <img src={comex_course_im}></img>

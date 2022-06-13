@@ -14,6 +14,7 @@ function Calcbro(props) {
             <div class="side left">
                 <h1 className="title">Calcbro</h1>
                 <div className="title-divisor divisor"></div>
+                <span style={{ margin: '0 auto 20px auto', fontStyle: 'italic', color: 'var(--main-blue)' }}>Os vídeos podem levar um tempo para carregar</span>
                 <p className="default">
                     Esse é um dos mais completos sites que já fiz. Trata-se de um site para realizar cálculos e funções diversas. Inicialmente fiz ele para agilizar alguns cálculos na escola, porém, posteriormente fui adicionando mais funções como cadastro de usuários e sistemas complexos de segunrança no back-end com fins de estudo. Ele utiliza nodeJS em seu back-end e javascript vanilla em seu front-end e é completamente responsivo.
                 </p>
