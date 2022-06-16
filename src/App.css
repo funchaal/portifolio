@@ -15,7 +15,7 @@
 }
 
 :root {
-  --bg-pc: a, 24);
+  --bg-pc: rgb(24, 24, 24);
   --bg-mb: rgb(37, 37, 37);
   --main-blue: rgb(0, 174, 255);
   --main-text-color: rgb(231, 231, 231);
@@ -860,7 +860,7 @@ header .home-contact img:last-child {
   opacity: 0;
   width: max-content;
   transform: translateX(-5px);
-  transition-duration: 1000ms;
+  transition-duration: 600ms;
   transition-timing-function: ease-out;
 }
 
@@ -868,7 +868,7 @@ header .home-contact img:last-child {
   text-transform: uppercase;
 }
 
-.item-box span.on {
+.item-box span.on, .item-box a {
   opacity: 100%;
   transform: none;
 }
@@ -876,6 +876,70 @@ header .home-contact img:last-child {
 .item-box img {
   height: 12px;
   margin-right: 10px;
+}
+
+.contact-box a {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(87, 87, 87);
+  background-color: rgb(42, 42, 42);
+  font-size: 1.2em;
+  width: max-content;
+  opacity: 0;
+  animation: fade-in 1000ms ease-out forwards 1500ms;
+  transition-duration: 200ms;
+}
+
+.contact-box a:hover, .contact-box.location:hover {
+  filter: brightness(1.4);
+}
+
+.contact-box.location {
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: 1px solid rgb(87, 87, 87);
+  background-color: rgb(42, 42, 42);
+  opacity: 0;
+  animation: fade-in 1000ms ease-out forwards 1500ms;
+  transition-duration: 200ms;
+}
+
+.contact-box.location.on {
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.contact-box.location span {
+  font-size: 1.2em;
+}
+
+.contact-box a img, .contact-box.location img {
+  width: 18px;
+  max-height: 16px;
+  margin-right: 10px;
+}
+
+.contact-box.location img {
+  max-height: 18px;
+}
+
+.contact-box.location .x {
+  left: 0;
+}
+
+.media-loading-time-alert {
+  margin: 0 auto 20px auto;
+  font-style: italic;
+  text-decoration: underline;
+  color: cyan;
+  opacity: 0;
+  animation: fade-in 1000ms forwards 2500ms;
 }
 
 #cs_ctn {
@@ -1405,16 +1469,10 @@ p.default > span {
   flex-direction: row;
   align-items: center;
   margin: 0 0 15px 20px;
-  animation: fade-in 1000ms ease-out forwards 1500ms;
-  opacity: 0;
+  font-size: 0.9em;
 }
 
-.contact-box img {
-  width: 20px;
-  margin-right: 15px;
-}
-
-.contact-box img:last-child {
+.contact-box > img:last-child {
   position: absolute;
   left: 100%;
   top: 50%;
@@ -1422,15 +1480,8 @@ p.default > span {
   display: none;
 }
 
-.contact-box a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+.contact-box.location span {
 
-.contact-box span {
-  font-size: 1.3em;
-  color: var(--main-blue);
 }
 
 #contact_form {
@@ -2046,6 +2097,9 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  .contact-box a:hover, .contact-box.location:hover {
+    filter: none;
+  }
   button:hover {
     filter: none;
     transform: none !important;

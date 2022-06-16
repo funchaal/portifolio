@@ -64,7 +64,7 @@ function graduations() {
                 </div>
                 <h3>Outros cursos</h3>
                 <div className="subtitle-divisor divisor"></div>
-                <p className="default">Fiz diversos cursos suplementares, segue os principais:</p>
+                <p className="default">Também realizei diversos cursos extracurriculares, abaixo estão os principais.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">
                     <img src={graduations_ic}></img>

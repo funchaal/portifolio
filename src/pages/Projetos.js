@@ -35,7 +35,7 @@ function Projetos(props) {
             <div class="side left">
                 <h1 className="title">Projetos</h1>
                 <div className="title-divisor divisor"></div>
-                <span style={{ margin: '0 auto 20px auto', fontStyle: 'italic', color: 'var(--main-blue)' }}>Os vídeos podem levar um tempo para carregar</span>
+                <span className="media-loading-time-alert">Os vídeos podem levar um tempo para carregar</span>
                 <p className="default">
                     Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins acadêmicos quanto para fins pessoais. Abaixo listei alguns deles.
                 </p>

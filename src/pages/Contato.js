@@ -8,11 +8,11 @@ import sendMessage from '../modules/message.js'
 import contact_il from '../images/illustrations/contact-il.svg'
 
 //Icons
-import mail_ic from '../images/icons/mail-ic.svg'
-import whatsapp_ic from '../images/icons/whatsapp-ic.svg'
-import cellphone_ic from '../images/icons/cellphone-ic.svg'
+import mail_gradient_ic from '../images/icons/mail-gradient-ic.svg'
+import whatsapp_gradient_ic from '../images/icons/whatsapp-gradient-ic.svg'
+import cellphone_gradient_ic from '../images/icons/cellphone-gradient-ic.svg'
+import location_gradient_ic from '../images/icons/location-gradient-ic.svg'
 import clipboard_ic from '../images/icons/clipboard-ic.svg'
-import location_ic from '../images/icons/location-ic.svg'
 import x_ic from '../images/icons/x-ic.svg'
 import hand_ic from '../images/icons/hand-ic.svg'
 import loading_ic from '../images/icons/loading-ic.svg'
@@ -78,30 +78,30 @@ function Contato(props) {
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
                 <div className="contact-box">
                     <a href="mailto:rafael.funchal@outlook.com" target="_blank">
-                        <img src={mail_ic}></img>
-                        <span>rafael.funchal@outlook.com</span>
+                        <img src={mail_gradient_ic}></img>
+                        rafael.funchal@outlook.com
                     </a>
                     <img src={clipboard_ic}></img>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
                 <div className="contact-box">
                     <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
-                        <img src={whatsapp_ic}></img>
-                        <span>+55 13 98126-2295</span>
+                        <img src={whatsapp_gradient_ic}></img>
+                        +55 13 98126-2295
                     </a>
                     <img src={clipboard_ic}></img>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
                 <div className="contact-box">
                     <a href="tel:+5513981235835" target="_blank">
-                        <img src={cellphone_ic}></img>
-                        <span>+55 13 98123-5835</span>
+                        <img src={cellphone_gradient_ic}></img>
+                        +55 13 98123-5835
                     </a>
                     <img src={clipboard_ic}></img>
                 </div>
-                <p className="default" style={{ textIndent: 0, fontSize: '1.1em' }}>Residente em: </p>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Sou residente na cidade de Guarujá, no estado de São Paulo, Brasil. Dê uma olhada no mapa:</p>
                 <div className="contact-box location" onClick={(e) => e.currentTarget.classList.toggle('on')}>
-                    <img src={location_ic} className="hide"></img>
+                    <img src={location_gradient_ic} className="hide"></img>
                     <span className="hide">Guarujá - SP</span>
                     <img src={x_ic} className="x" style={{ width: '15px' }}></img>
                     <img src={hand_ic} className="hide hand"></img>
