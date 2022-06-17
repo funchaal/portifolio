@@ -1490,7 +1490,6 @@ p.default > span {
   content: 'copiar';
   position: absolute;
   top: 100%;
-  margin-top: 1px;
   white-space: nowrap;
   font-size: 0.8em;
   border-radius: 5px;
@@ -2170,8 +2169,14 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  .contact-box {
+    margin: 0 0 15px 1vw;
+  }
   .contact-box a:hover, .contact-box.location:hover {
     filter: none;
+  }
+  .contact-box > .clipboard-box:not(.on):not(.off)::after {
+    transform: none;
   }
   button:hover {
     filter: none;
