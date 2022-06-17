@@ -891,6 +891,7 @@ header .home-contact img:last-child {
   background-color: rgb(42, 42, 42);
   font-size: 1.3em;
   width: max-content;
+  transition-duration: 500ms;
 }
 
 .contact-box a:hover, .contact-box.location:hover {
