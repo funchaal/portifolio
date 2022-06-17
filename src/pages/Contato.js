@@ -1,5 +1,6 @@
 //React
 import { useState } from 'react'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 //Modules
 import sendMessage from '../modules/message.js'
@@ -70,6 +71,19 @@ function Contato(props) {
         }
     }
 
+    function copy(string, success) {
+        const el = document.querySelector(`[copy="${string}"]`)
+
+        if (success) {
+            el.classList.add('on')
+            setTimeout(() => el.classList.remove('on'), 3000)
+        } else {
+            el.classList.add('off')
+            setTimeout(() => el.classList.remove('off'), 1500)
+            sendMessage('Houve um erro ao copiar :/', 'red')
+        }
+    }
+
     return (
         <div id="main_container">
             <div class="side left">
@@ -81,7 +95,11 @@ function Contato(props) {
                         <img src={mail_gradient_ic}></img>
                         rafael.funchal@outlook.com
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
+                        <div copy="rafael.funchal@outlook.com" className="clipboard-box">
+                            <img src={clipboard_ic}></img>
+                        </div>
+                    </CopyToClipboard>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
                 <div className="contact-box">
@@ -89,7 +107,11 @@ function Contato(props) {
                         <img src={whatsapp_gradient_ic}></img>
                         +55 13 98126-2295
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
+                        <div copy="+55 13 98126-2295" className="clipboard-box">
+                            <img src={clipboard_ic}></img>
+                        </div>
+                    </CopyToClipboard>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
                 <div className="contact-box">
@@ -97,7 +119,11 @@ function Contato(props) {
                         <img src={cellphone_gradient_ic}></img>
                         +55 13 98123-5835
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <CopyToClipboard text="+55 13 98123-5835" onCopy={copy}>
+                        <div copy="+55 13 98123-5835" className="clipboard-box">
+                            <img src={clipboard_ic}></img>
+                        </div>
+                    </CopyToClipboard>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Sou residente na cidade de Guarujá, no estado de São Paulo, Brasil. Dê uma olhada no mapa:</p>
                 <div className="contact-box location" onClick={(e) => e.currentTarget.classList.toggle('on')}>
@@ -108,7 +134,6 @@ function Contato(props) {
                     <div className="map" style={{ left: '20px' }}>
                         <div className="mapouter" style={{position: "relative", textAlign: "right", height: "400px", width: "500px", maxWidth: "70vw" }}><div className="gmap_canvas" style={{overflow: "hidden", background: "none !important", height: "400px", width: "500px", maxWidth: "70vw" }}><iframe style={{ width: "100%", height: "400px", maxWidth: "100%" }} id="gmap_canvas" src="https://maps.google.com/maps?q=guaruja&t=&z=7&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><a href="https://123movies-to.org"></a><br></br><a href="https://www.embedgooglemap.net">embedding map</a></div></div>
                     </div>
-                    <img src={clipboard_ic}></img>
                 </div>
                 <form id="contact_form" onSubmit={formSubmit}>
                     <h3>Mensagem direta</h3>
