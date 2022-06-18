@@ -15,6 +15,8 @@ import Projetos from './pages/Projetos'
 import Calcbro from './pages/Calcbro'
 import Contato from './pages/Contato'
 
+import cat from './images/icons/cat.gif'
+
 function App() {
 
   document.title = 'Portifólio - Rafael Funchal'
@@ -42,29 +44,32 @@ function App() {
     }
   }
   window.onload = () => {
-    console.log('im in')
-    render((
-      <Router>
-      <main>
-        <Routes>
-            <Route exact path="/" element={<Home />}/>
-            <Route exact path="/habilidades" element={<Habilidades />}/>
-            <Route exact path="/estudos" element={<Estudos />}/>
-            <Route exact path="/notas" element={<Notas />}/>
-            <Route exact path="/formacao" element={<Formacao />}/>
-            <Route exact path="/objetivos" element={<Objetivos />}/>
-            <Route exact path="/projetos" element={<Projetos />}/>
-            <Route exact path="/contato" element={<Contato />}/>
-            <Route exact path="/calcbro" element={<Calcbro />}/>
-        </Routes>      
-      </main>
-  <Header /> 
-  </Router>
-    ), document.getElementById('base'))
+    setTimeout(() => {
+      render((
+        <Router>
+          <main>
+            <Routes>
+              <Route exact path="/" element={<Home />}/>
+              <Route exact path="/habilidades" element={<Habilidades />}/>
+              <Route exact path="/estudos" element={<Estudos />}/>
+              <Route exact path="/notas" element={<Notas />}/>
+              <Route exact path="/formacao" element={<Formacao />}/>
+              <Route exact path="/objetivos" element={<Objetivos />}/>
+              <Route exact path="/projetos" element={<Projetos />}/>
+              <Route exact path="/contato" element={<Contato />}/>
+              <Route exact path="/calcbro" element={<Calcbro />}/>
+            </Routes>      
+          </main>
+        <Header /> 
+        </Router>
+      ), document.getElementById('base'))
+    }, 1000)
   }
   
   return (
     <div id="base">
+      {/* <img src={cat} style={{ width: '100px', margin: '10% auto' }}></img>
+      <span style={{ position: 'absolute', bottom: '10px', left: '10px'}}>Carregando...</span> */}
     </div>
   );
 }
