@@ -287,15 +287,15 @@ header {
   cursor: pointer;
   margin: 10px 0;
   border-radius: 15px;
-  background: rgb(56, 56, 56);
+  background-color: transparent;
   transition-duration: 200ms;
   box-shadow: none;
   font-size: 1em;
 }
 
-#menu .ctn button:first-child {
+/* #menu .ctn button:first-child {
   margin-top: 5px;
-}
+} */
 
 #menu .icon-ctn button {
   width: 40px;
@@ -306,7 +306,17 @@ header {
 #menu .list-ctn button {
   width: 100%;
   height: 40px;
-  padding-left: 10px;
+  max-height: 40px;
+  align-items: flex-start;
+  padding-left: 60px;
+}
+
+#menu .ctn button.menu-option.on {
+  color: black;
+}
+
+#menu .ctn .box button.menu-option.on img {
+  filter: invert(1);
 }
 
 #menu .ctn button img {
@@ -326,14 +336,23 @@ header {
   left: 0;
 }
 
+#menu .ctn button.marker, #menu .ctn button.marker-solid {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  transition-duration: 200ms;
+}
+
+#menu .ctn button.marker {
+  background: rgb(56, 56, 56);
+  filter: brightness(1.4);
+}
+
+#menu .ctn button.marker-solid {
+  background-color: white;
+}
+
 #menu .ctn button a {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
   height: 100%;
   text-decoration: none;
 }
@@ -1873,6 +1892,9 @@ p.default > span {
 }
 
 @media (max-width: 1199px) {
+  #menu .ctn button.marker, #menu .ctn button.marker-solid {
+    top: -50px;
+  }
   #follow_to.home {
     display: block;
   }
@@ -2207,9 +2229,6 @@ p.default > span {
     background: rgba(35, 35, 35);
   }
   #menu {
-    background: rgb(70, 70, 70);
-  }
-  #menu .ctn button {
     background: rgb(70, 70, 70);
   }
   #follow_to.home {

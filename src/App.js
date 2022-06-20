@@ -16,6 +16,7 @@ import Calcbro from './pages/Calcbro'
 import Contato from './pages/Contato'
 
 import cat from './images/icons/cat.gif'
+import changeMenu from './modules/changeMenu'
 
 function App() {
 
@@ -24,7 +25,12 @@ function App() {
   let innerSizes = [window.innerWidth, window.innerHeight]
 
   window.onresize = () => {
+    if (window.innerWidth >= 1199 || window.innerWidth <= 2000) {
+      changeMenu(document.querySelector('#menu .menu-option.on').getAttribute('identifier'))
+    }
+    
     const sb_form = document.getElementById('search_bar_form')
+    
     if (window.innerWidth < 1200) {
       if (window.innerWidth !== innerSizes[0]) sb_form.style.display = 'none'
     } else if (window.innerWidth >= 1200) {
@@ -43,6 +49,7 @@ function App() {
       document.getElementById('menu_icon').classList.remove('on')
     }
   }
+  
   window.onload = () => {
     render((
       <Router>
