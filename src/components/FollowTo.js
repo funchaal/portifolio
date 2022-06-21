@@ -38,22 +38,44 @@ function FollowTo(props) {
         main.scrollTop = 0
     }
 
+    let timer = 0
+
+    function timerFunction() {
+        const marker_ft = document.querySelector('#follow_to .box .marker-ft')
+        marker_ft.style.opacity = 0
+    }
+
+    function mouseMove(e) {
+    const el = document.elementFromPoint(e.clientX, e.clientY)
+    if (!el.classList.contains('followto-option')) return
+    
+    const marker_ft = document.querySelector('#follow_to .box .marker-ft')
+    const h = el.getBoundingClientRect().top
+    const reference = document.querySelector('#follow_to .box').getBoundingClientRect().top
+    
+    clearTimeout(timer)
+    
+    marker_ft.style.opacity = '100%'
+    marker_ft.style.transform = `translateY(${h - reference}px)`
+    }
+
     return (
         <div id="follow_to" className={props.type === 'home' ? 'home' : ''}>
             <span><img src={small_arrow_gradient}></img>Continuar para?</span>
             <div className="box">
+                <button className="marker-ft"></button>
                 {
                     keys.map(val => val === 'calcBro' ? 
                     <>
                         <div className="calcbro-divisor" style={{ width: '50%' }}></div>
                         <Link to={linkDB[val]}>
-                            <button className="calcbro" onClick={pageUp}>
+                            <button className="followto-option calcbro" onClick={pageUp} onMouseMove={mouseMove} onMouseOut={() => timer = setTimeout(() => timerFunction(), 500)}>
                                 <img src={obj[val]}></img>{val}
                             </button>
                         </Link>
                     </> : 
                         <Link to={linkDB[val]}>
-                            <button onClick={pageUp}>
+                            <button className="followto-option" onClick={pageUp} onMouseMove={mouseMove} onMouseOut={() => timer = setTimeout(() => timerFunction(), 500)}>
                                 <img src={obj[val]}></img>{val}
                             </button>
                         </Link>)

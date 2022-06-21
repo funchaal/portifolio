@@ -338,16 +338,24 @@ header {
   left: 0;
 }
 
-#menu .ctn button.marker, #menu .ctn button.marker-solid {
+#menu .ctn button.marker, #menu .ctn button.marker-solid, #follow_to .box .marker-ft {
   position: absolute;
   top: 0;
   pointer-events: none;
   transition-duration: 200ms;
 }
 
-#menu .ctn button.marker {
+#menu .ctn button.marker, #follow_to .box .marker-ft {
+  opacity: 0;
+}
+
+#follow_to .box .marker-ft {
+  width: calc(100% - 10px);
+}
+
+#menu .ctn button.marker, #follow_to .box .marker-ft {
   background: rgb(56, 56, 56);
-  filter: brightness(1.4);
+  filter: brightness(1.5);
 }
 
 #menu .ctn button.marker-solid {
@@ -963,7 +971,7 @@ header .home-contact img:last-child {
   text-decoration: underline;
   color: cyan;
   opacity: 0;
-  animation: fade-in 1000ms forwards  2000ms;
+  animation: fade-in 1000ms forwards 1500ms;
 }
 
 #cs_ctn {
@@ -1381,24 +1389,22 @@ p.default > img, p.default > video {
   margin-top: 40px;
   margin-bottom: 20px;
   border-radius: 15px;
-  border: 2px solid rgb(0, 187, 255);
+  border: 2px solid var(--main-blue);
   opacity: 0;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
   animation: fade-in 1000ms ease-out forwards 1500ms;
 }
+
 button.link-content {
-  width: 100%;
-  height: 40px;
   max-width: 300px;
-  margin: 0 40px 20px auto;
-  padding: 10px 15px;
-  border-radius: 10px;
+  margin: 10px 40px 20px auto;
+  background-color: transparent;
+  box-shadow: none;
 }
 
 button.link-content a {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: row-reverse;
   width: 100%;
 }
 
@@ -1408,19 +1414,12 @@ button.link-content span {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: cyan;
 }
 
 button.link-content img {
-  width: 20px;
-  margin-right: 20px;
-}
-
-button.link-content.download {
-  background-color: rgb(0, 60, 255);
-}
-
-button.link-content.github {
-  background-color: rgb(66, 59, 59);
+  width: 18px;
+  margin-left: 15px;
 }
 
 @media (max-width: 599px) {
@@ -1575,8 +1574,6 @@ p.default > span {
   pointer-events: none;
   width: 18px;
 }
-
-/* @keyframes blink */
 
 #contact_form {
   display: flex;
@@ -1736,16 +1733,19 @@ p.default > span {
   display: flex;
   flex-direction: row;
   align-items: center;
+  pointer-events: none;
   font-size: 1.2em;
   font-weight: 400;
 }
 
 #follow_to span img {
+  pointer-events: none;
   height: 15px;
   margin: 0 10px;
 }
 
 #follow_to .box {
+  position: relative;
   width: 300px;
   padding: 5px;
   margin: 20px 0 0 40px;
@@ -1756,13 +1756,17 @@ p.default > span {
 
 #follow_to button {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   height: 40px;
+  padding-left: 60px;
   border-radius: 15px;
+  background-color: transparent;
   font-size: 1em;
-  background-color: rgb(56, 56, 56);
-  box-shadow: none;
   text-transform: capitalize;
+  box-shadow: none;
 }
 
 #follow_to button img {
@@ -2194,11 +2198,18 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  #menu .ctn button.marker, #follow_to .box .marker-ft {
+    background: transparent;
+    filter: none;
+  }
   .contact-box {
     margin: 0 0 15px 1vw;
   }
   .contact-box a:hover, .contact-box.location:hover {
     filter: none;
+  }
+  .contact-box > .clipboard-box {
+    margin-bottom: 10px;
   }
   .contact-box > .clipboard-box:not(.on):not(.off)::after {
     transform: none;
@@ -2240,9 +2251,6 @@ p.default > span {
   #follow_to .box {
     background-color: rgb(70, 70, 70);
     margin: 20px auto 0 auto;
-  }
-  #follow_to button {
-    background-color: rgb(70, 70, 70);
   }
   header {
     background-color: rgba(35, 35, 35, 0.9);
