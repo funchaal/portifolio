@@ -12,7 +12,7 @@ import twitter_ic from '../images/icons/twitter-ic.svg'
 import facebook_ic from '../images/icons/facebook-ic.svg'
 import linkedin_ic from '../images/icons/linkedin-ic.svg'
 
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import changeMenu from '../modules/changeMenu.js'
 
@@ -35,19 +35,21 @@ function ocMenu(open, auto = false) {
   }
 }
 
+
+
 function Button(props) {
   const identifier = props.text ? props.text.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase() : null
   if (props.type === 'social') {
     return (
       <a href={props.href} rel="noreferrer" target="_blank">
-        <button className={`menu-option ${props.className ? props.className : ''}`} social="true" identifier={identifier} onMouseOut={() => timer = setTimeout(timerFunction, 500)} onClick={() => { ocMenu(false, true); changeMenu(props.text) }}>
+        <button className={`menu-option ${props.className ? props.className : ''}`} social="true" identifier={identifier} onMouseOut={() => timer = setTimeout(timerFunction, 500)} onClick={() => { ocMenu(false, true) }}>
           <img src={props.img} alt="" style={props.style}></img>{props.model !== 'small' ? props.text : ''}
         </button>
       </a>
     )
   } else {
     return (
-      <button className={`menu-option ${props.className ? props.className : ''}`} identifier={identifier} onMouseOut={() => timer = setTimeout(timerFunction, 500)} onClick={() => { ocMenu(false, true); document.querySelector('main').scrollTop = 0; changeMenu(props.text) }}>
+      <button className={`menu-option ${props.className ? props.className : ''}`} identifier={identifier} onMouseOut={() => timer = setTimeout(timerFunction, 500)} onClick={() => { ocMenu(false, true); document.querySelector('main').scrollTop = 0 }}>
         <img src={props.img} alt="" style={props.style}></img>{props.model !== 'small' ? props.text : ''}
       </button>
       )
@@ -77,7 +79,7 @@ function timerFunction() {
 function mouseMove(e, element) {
   const el = element || document.elementFromPoint(e.clientX, e.clientY)
   if (!el.classList.contains('menu-option')) return
-
+  
   const markers = document.querySelectorAll('.marker')
   const h = el.getBoundingClientRect().top
   
@@ -90,9 +92,9 @@ function mouseMove(e, element) {
 }
 
 function Menu() {
-  useEffect(() => {
-    changeMenu(window.location.pathname.slice(1))
-  })
+  const location = useLocation()  
+  useEffect(() => changeMenu(window.location.pathname.slice(1)), [location])
+
   return (
     <div id="menu_ctn">
           <div id="menu" onMouseMove={mouseMove} onMouseOver={() => window.innerWidth >= 1200 && ocMenu(true)} onMouseOut={() => window.innerWidth >= 1200 && ocMenu(false)}>
@@ -111,7 +113,7 @@ function Menu() {
                     <Link to="/projetos"><Button img={projects_ic} text="Projetos" model="small"/></Link>
                     <Link to="/contato"><Button img={mail_ic} text="Contato" model="small"/></Link>
                     <div className="calcbro-divisor"></div>
-                    <Link to="/calcbro"><Button img={calcbro_logo} text="CalcBro" style={{height: '20px'}} model="small"/></Link>
+                    <Link to="/calcbro"><Button className="no-invert" img={calcbro_logo} text="CalcBro" style={{height: '20px'}} model="small"/></Link>
                   </div>
                     <div className="box">
                     <Button type="social" href="https://www.linkedin.com/in/rafael-funchal/" img={linkedin_ic} text="Linkedin" model="small"/>
@@ -133,7 +135,7 @@ function Menu() {
                     <Link to="/projetos"><Button img={projects_ic} text="Projetos"/></Link>
                     <Link to="/contato"><Button img={mail_ic} text="Contato"/></Link>
                     <div className="calcbro-divisor"></div>
-                    <Link to="/calcbro"><Button img={calcbro_logo} text="CalcBro" style={{height: '20px'}}/></Link>
+                    <Link to="/calcbro"><Button className="no-invert" img={calcbro_logo} text="CalcBro" style={{height: '20px'}}/></Link>
                   </div>
                     <div className="box">
                       <Button type="social" href="https://www.linkedin.com/in/rafael-funchal/" img={linkedin_ic} text="Linkedin"/>

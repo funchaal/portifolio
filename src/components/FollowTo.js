@@ -43,7 +43,20 @@ function FollowTo(props) {
             <span><img src={small_arrow_gradient}></img>Continuar para?</span>
             <div className="box">
                 {
-                    keys.map(val => val === 'calcBro' ?<><div className="calcbro-divisor" style={{ width: '50%' }}></div><Link to={linkDB[val]}><button className="calcbro" onClick={pageUp}><img src={obj[val]}></img>{val}</button></Link></> : <Link to={linkDB[val]}><button onClick={pageUp}><img src={obj[val]}></img>{val}</button></Link>)
+                    keys.map(val => val === 'calcBro' ? 
+                    <>
+                        <div className="calcbro-divisor" style={{ width: '50%' }}></div>
+                        <Link to={linkDB[val]}>
+                            <button className="calcbro" onClick={pageUp}>
+                                <img src={obj[val]}></img>{val}
+                            </button>
+                        </Link>
+                    </> : 
+                        <Link to={linkDB[val]}>
+                            <button onClick={pageUp}>
+                                <img src={obj[val]}></img>{val}
+                            </button>
+                        </Link>)
                 }
             </div>
         </div>

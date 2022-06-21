@@ -313,10 +313,12 @@ header {
 
 #menu .ctn button.menu-option.on {
   color: black;
+  transition-duration: 600ms;
 }
 
-#menu .ctn .box button.menu-option.on img {
+#menu .ctn .box button.menu-option.on:not(.no-invert) img {
   filter: invert(1);
+  transition-duration: 600ms;
 }
 
 #menu .ctn button img {
@@ -957,10 +959,11 @@ header .home-contact img:last-child {
 .media-loading-time-alert {
   margin: 0 auto 20px auto;
   font-style: italic;
+  text-align: center;
   text-decoration: underline;
   color: cyan;
   opacity: 0;
-  animation: fade-in 1000ms forwards 2500ms;
+  animation: fade-in 1000ms forwards  2000ms;
 }
 
 #cs_ctn {
