@@ -1,6 +1,6 @@
 function changeMenu(option) {
     const els = document.querySelectorAll(`#menu .menu-option[identifier="${option !== '' ? option.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase() : 'home'}"]`)
-    if (els[0] || els[0].hasAttribute('social')) return
+    if (!els[0] || els[0].hasAttribute('social')) return
     
     document.querySelectorAll('#menu .menu-option.on').forEach((el) => el.classList.remove('on'))
     els.forEach((el) => el.classList.add('on'))
