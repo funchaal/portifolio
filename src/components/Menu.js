@@ -82,12 +82,13 @@ function mouseMove(e, element) {
   
   const markers = document.querySelectorAll('.marker')
   const h = el.getBoundingClientRect().top
+  const scroll = document.querySelector('#menu nav').scrollTop
   
   clearTimeout(timer)
   
   markers.forEach((el) => { 
     el.style.opacity = '100%'
-    el.style.transform = `translateY(${h - 15}px)`
+    el.style.transform = `translateY(${h - 15 + scroll}px)`
   })
 }
 
