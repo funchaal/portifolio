@@ -2208,11 +2208,8 @@ p.default > span {
   .contact-box a:hover, .contact-box.location:hover {
     filter: none;
   }
-  .contact-box > .clipboard-box {
-    margin-bottom: 10px;
-  }
-  .contact-box > .clipboard-box:not(.on):not(.off)::after {
-    transform: none;
+  .contact-box > .clipboard-box:not(.on):not(.off):hover::after {
+    transform: rotateX(-90deg);
   }
   button:hover {
     filter: none;
