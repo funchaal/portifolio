@@ -15,7 +15,7 @@ import Projetos from './pages/Projetos'
 import Calcbro from './pages/Calcbro'
 import Contato from './pages/Contato'
 
-import cat from './images/icons/cat.gif'
+// import cat from './images/icons/cat.gif'
 import changeMenu from './modules/changeMenu'
 
 function App() {
