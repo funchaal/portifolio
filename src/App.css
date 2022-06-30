@@ -889,7 +889,7 @@ header .home-contact img:last-child {
   opacity: 0;
   width: max-content;
   transform: translateX(-5px);
-  transition-duration: 600ms;
+  transition-duration: 800ms;
   transition-timing-function: ease-out;
 }
 
