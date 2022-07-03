@@ -17,8 +17,10 @@ function Home(props) {
   function mouseMv(e) {
     if (window.innerWidth > 1199) {
       const el = document.getElementById('cs_ctn')
+      const x = -(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))
+      const y = -(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))
       el.style.transitionDuration = '100ms'
-      el.style.transform = `translate(${-(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))}px, ${-(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))}px)`
+      el.style.transform = `rotateX(${y * 4}deg) rotateY(${x * 2}deg) translate(${x * 2}px, ${y * 2}px)`
     }
   }
 
