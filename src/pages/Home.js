@@ -30,8 +30,8 @@ function Home(props) {
       main_box.style.transitionDuration = '100ms'
       aux_box.style.transitionDuration = '100ms'
 
-      main_box.style.transform = `rotateX(${y * 2}deg) rotateY(${x * 2}deg) translate(${x * 2}px, ${y * 2}px)`
-      aux_box.style.transform = `rotateX(${y * 2}deg) rotateY(${x * 2}deg) translate(${x}px, ${y}px)`
+      main_box.style.transform = `rotateY(${x * 2}deg) translate(${x * 2}px, ${y * 2}px)`
+      aux_box.style.transform = `rotateY(${x * 2}deg) translate(${x}px, ${y}px)`
     }
   }
 
