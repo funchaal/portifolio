@@ -14,21 +14,36 @@ import { useEffect } from 'react'
 
 function Home(props) {
 
+  let timer
+
   function mouseMv(e) {
     if (window.innerWidth > 1199) {
-      const el = document.getElementById('cs_ctn')
-      const x = -(((window.innerWidth / 2) - e.clientX) - 0.99 * ((window.innerWidth / 2) - e.clientX))
-      const y = -(((window.innerHeight / 2) - e.clientY) - 0.99 * ((window.innerHeight / 2) - e.clientY))
-      el.style.transitionDuration = '100ms'
-      el.style.transform = `rotateX(${y * 4}deg) rotateY(${x * 2}deg) translate(${x * 2}px, ${y * 2}px)`
+      timer && clearTimeout(timer)
+      const main_box = document.querySelector('#cs_ctn .box:last-child')
+      const aux_box = document.querySelector('#cs_ctn .box:first-child')
+
+      const x = -(((window.innerWidth / 2) - e.clientX) * 0.01)
+      const y = -(((window.innerHeight / 2) - e.clientY) * 0.01)
+
+      aux_box.style.opacity = '100%'
+      
+      main_box.style.transitionDuration = '100ms'
+      aux_box.style.transitionDuration = '100ms'
+
+      main_box.style.transform = `rotateX(${y * 2}deg) rotateY(${x * 2}deg) translate(${x * 2}px, ${y * 2}px)`
+      aux_box.style.transform = `rotateX(${y * 2}deg) rotateY(${x * 2}deg) translate(${x}px, ${y}px)`
     }
   }
 
   function mouseOt() {
     if (window.innerWidth > 1199) {
-      const el = document.getElementById('cs_ctn')
-      el.style.transitionDuration = '1000ms'
-      el.style.transform = 'none'
+      const main_box = document.querySelector('#cs_ctn .box:last-child')
+      const aux_box = document.querySelector('#cs_ctn .box:first-child')
+      main_box.style.transitionDuration = '1000ms'
+      aux_box.style.transitionDuration = '1000ms'
+      main_box.style.transform = 'none'
+      aux_box.style.transform = 'none'
+      timer = setTimeout(() => { aux_box.style.transitionDuration = '0ms'; aux_box.style.opacity = 0 }, 1000)
     }
   }
 
@@ -68,10 +83,18 @@ function Home(props) {
           <div className="right side" style={{ justifyContent: 'center', paddingTop: '10vh' }}>
             <div></div>
             <div id="cs_ctn">
-              <span>Choo</span>
-              <span>se</span>
-              <span>Some</span>
-              <span>thing</span>
+              <div className="box">
+                <span>Choo</span>
+                <span>se</span>
+                <span>Some</span>
+                <span>thing</span>
+              </div>
+              <div className="box">
+                <span>Choo</span>
+                <span>se</span>
+                <span>Some</span>
+                <span>thing</span>
+              </div>
             </div>
             <div id="cv_ctn">
               <p>Este site foi desenvolvido especialmente por mim com o objetivo de partilhar meus conhecimentos e experiências de forma mais dinâmica, porém, se optar por um resumo em PDF, basta clicar do botão abaixo para acessá-lo.</p>

@@ -975,48 +975,82 @@ header .home-contact img:last-child {
 }
 
 #cs_ctn {
+  position: relative;
   margin: 0 auto;
   opacity: 0;
   animation: fade-in 1000ms ease-out forwards 1000ms;
 }
 
-#cs_ctn span {
+#cs_ctn .box:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#cs_ctn .box span {
   display: block;
   font-size: 8em;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 10px;
   line-height: 0.8em;
-  opacity: 30%;
   animation: cs-ctn-alternate 5000ms linear infinite;
 }
 
-#cs_ctn span:nth-child(1) {
-  --opacity-1: 100%;
-  --opacity-2: 30%;
-  --opacity-3: 30%;
-  --opacity-4: 30%;
+#cs_ctn .box:last-child span:nth-child(1) {
+  --color-1: white;
+  --color-2: rgb(90, 90, 90);
+  --color-3: rgb(90, 90, 90);
+  --color-4: rgb(90, 90, 90);
 }
 
-#cs_ctn span:nth-child(2) {
-  --opacity-1: 30%;
-  --opacity-2: 100%;
-  --opacity-3: 30%;
-  --opacity-4: 30%;
+#cs_ctn .box:last-child span:nth-child(2) {
+  --color-1: rgb(90, 90, 90);
+  --color-2: white;
+  --color-3: rgb(90, 90, 90);
+  --color-4: rgb(90, 90, 90);
 }
 
-#cs_ctn span:nth-child(3) {
-  --opacity-1: 30%;
-  --opacity-2: 30%;
-  --opacity-3: 100%;
-  --opacity-4: 30%;
+#cs_ctn .box:last-child span:nth-child(3) {
+  --color-1: rgb(90, 90, 90);
+  --color-2: rgb(90, 90, 90);
+  --color-3: white;
+  --color-4: rgb(90, 90, 90);
 }
 
-#cs_ctn span:nth-child(4) {
-  --opacity-1: 30%;
-  --opacity-2: 30%;
-  --opacity-3: 30%;
-  --opacity-4: 100%;
+#cs_ctn .box:last-child span:nth-child(4) {
+  --color-1: rgb(90, 90, 90);
+  --color-2: rgb(90, 90, 90);
+  --color-3: rgb(90, 90, 90);
+  --color-4: white;
+}
+
+#cs_ctn .box:first-child span:nth-child(1) {
+  --color-1: rgb(0, 140, 255);
+  --color-2: rgba(0, 140, 255, 0.2);
+  --color-3: rgba(0, 140, 255, 0.2);
+  --color-4: rgba(0, 140, 255, 0.2);
+}
+
+#cs_ctn .box:first-child span:nth-child(2) {
+  --color-1: rgba(0, 140, 255, 0.2);
+  --color-2: rgb(0, 140, 255);
+  --color-3: rgba(0, 140, 255, 0.2);
+  --color-4: rgba(0, 140, 255, 0.2);
+}
+
+#cs_ctn .box:first-child span:nth-child(3) {
+  --color-1: rgba(0, 140, 255, 0.2);
+  --color-2: rgba(0, 140, 255, 0.2);
+  --color-3: rgb(0, 140, 255);
+  --color-4: rgba(0, 140, 255, 0.2);
+}
+
+#cs_ctn .box:first-child span:nth-child(4) {
+  --color-1: rgba(0, 140, 255, 0.2);
+  --color-2: rgba(0, 140, 255, 0.2);
+  --color-3: rgba(0, 140, 255, 0.2);
+  --color-4: rgb(0, 140, 255);
 }
 
 .label-float {
@@ -1863,15 +1897,15 @@ p.default > span {
 }
 
 @keyframes cs-ctn-alternate {
-  0%    {opacity: var(--opacity-1)}
-  22%   {opacity: var(--opacity-1)}
-  25%   {opacity: var(--opacity-2)}
-  46%   {opacity: var(--opacity-2)}
-  50%   {opacity: var(--opacity-3)}
-  72%   {opacity: var(--opacity-3)}
-  75%  {opacity: var(--opacity-4)}
-  96%  {opacity: var(--opacity-4)}
-  100%  {opacity: var(--opacity-1)}
+  0%    {color: var(--color-1)}
+  22%   {color: var(--color-1)}
+  25%   {color: var(--color-2)}
+  46%   {color: var(--color-2)}
+  50%   {color: var(--color-3)}
+  72%   {color: var(--color-3)}
+  75%  {color: var(--color-4)}
+  96%  {color: var(--color-4)}
+  100%  {color: var(--color-1)}
 }
 
 @keyframes intro-title-bx-in {
@@ -1899,6 +1933,9 @@ p.default > span {
 }
 
 @media (max-width: 1199px) {
+  #menu .icon-ctn {
+    display: none;
+  }
   #menu .ctn button.marker, #menu .ctn button.marker-solid {
     top: -50px;
   }
