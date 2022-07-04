@@ -985,6 +985,7 @@ header .home-contact img:last-child {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
 
 #cs_ctn .box span {
