@@ -72,16 +72,53 @@ function Contato(props) {
     }
 
     function copy(string, success) {
-        const el = document.querySelector(`[copy="${string}"]`)
-
         if (success) {
-            el.classList.add('on')
-            setTimeout(() => el.classList.remove('on'), 3000)
+            sendMessage('Copiado!', 'green')
         } else {
-            el.classList.add('off')
-            setTimeout(() => el.classList.remove('off'), 1500)
             sendMessage('Houve um erro ao copiar :/', 'red')
         }
+    }
+
+    const func_2 = (e) => {
+        const [x, y] = [e.clientX, e.clientY]
+        const ver = document.elementsFromPoint(x, y)
+        if (ver.some(el => el.classList.contains('menu-contact-box')) || !ver.some(el => el.classList.contains('contact-box'))) {
+            document.querySelector('.contact-box .menu-contact-box.on').classList.remove('on')
+            window.removeEventListener('click', func_2)
+        }
+    }
+
+    function onClick(e) {
+        window.removeEventListener('click', func_2)
+        window.addEventListener('click', func_2)
+        const el = e.currentTarget
+        const ver = Array.from(el.querySelectorAll(':hover'))
+        if (ver.some(el => el.classList.contains('menu-contact-box'))) return
+        const menu = el.querySelector('.menu-contact-box')
+        const menu_on = document.querySelector('.contact-box .menu-contact-box.on')
+
+
+        const func_1 = () => {
+            const x = e.clientX
+            const y = e.clientY
+    
+            const refX = el.getBoundingClientRect().left
+            const refY = el.getBoundingClientRect().top
+            menu.style.transitionDuration = '400ms'
+            menu.style.transform = `translate(${x - refX + 20}px, ${y - refY + 20}px)`
+            menu.classList.add('on')
+            menu_on && menu_on.removeEventListener('transitionend', func_1)
+        }
+
+        if (menu_on) {
+            menu_on.style.transitionDuration = '200ms'
+            menu_on.classList.remove('on')
+            menu_on.addEventListener('transitionend', func_1)
+            return
+        }
+
+        func_1()
+
     }
 
     return (
@@ -90,40 +127,71 @@ function Contato(props) {
                 <h1 className="title">Contato </h1>
                 <div className="title-divisor divisor"></div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
-                <div className="contact-box">
-                    <a href="mailto:rafael.funchal@outlook.com" target="_blank">
+                <div className="contact-box" onClick={onClick}>
+                    <a>
                         <img src={mail_gradient_ic}></img>
                         rafael.funchal@outlook.com
                     </a>
-                    <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
-                        <div copy="rafael.funchal@outlook.com" className="clipboard-box">
-                            <img src={clipboard_ic}></img>
+                    <div className="menu-contact-box">
+                        <div className="box">
+                            <a href="mailto:rafael.funchal@outlook.com" target="_blank">
+                                <img src={mail_gradient_ic}></img>
+                                Enviar
+                            </a>
+                            <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
+                                <a>
+                                    <img src={mail_gradient_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
                         </div>
-                    </CopyToClipboard>
+                    </div>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
-                <div className="contact-box">
-                    <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
+                <div className="contact-box" onClick={onClick}>
+                    <a>
                         <img src={whatsapp_gradient_ic}></img>
                         +55 13 98126-2295
                     </a>
-                    <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
-                        <div copy="+55 13 98126-2295" className="clipboard-box">
-                            <img src={clipboard_ic}></img>
+                    <div className="menu-contact-box three-options">
+                        <div className="box">
+                            <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
+                                <img src={mail_gradient_ic}></img>
+                                Chamar
+                            </a>
+                            <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
+                                <a>
+                                    <img src={mail_gradient_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
+                            <a href="tel:+5513981262295" target="_blank">
+                                <img src={mail_gradient_ic}></img>
+                                Chamar
+                            </a>
                         </div>
-                    </CopyToClipboard>
+                    </div>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
-                <div className="contact-box">
-                    <a href="tel:+5513981235835" target="_blank">
+                <div className="contact-box" onClick={onClick}>
+                    <a>
                         <img src={cellphone_gradient_ic}></img>
                         +55 13 98123-5835
                     </a>
-                    <CopyToClipboard text="+55 13 98123-5835" onCopy={copy}>
-                        <div copy="+55 13 98123-5835" className="clipboard-box">
-                            <img src={clipboard_ic}></img>
+                    <div className="menu-contact-box">
+                        <div className="box">
+                            <a href="tel:+5513981235835" target="_blank">
+                                <img src={mail_gradient_ic}></img>
+                                Ligar
+                            </a>
+                            <CopyToClipboard text="+55 13 98123-5835" onCopy={copy}>
+                                <a>
+                                    <img src={mail_gradient_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
                         </div>
-                    </CopyToClipboard>
+                    </div>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Sou residente na cidade de Guarujá, no estado de São Paulo, Brasil. Dê uma olhada no mapa:</p>
                 <div className="contact-box location" onClick={(e) => e.currentTarget.classList.toggle('on')}>
