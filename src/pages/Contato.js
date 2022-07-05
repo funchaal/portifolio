@@ -140,7 +140,7 @@ function Contato(props) {
                             </a>
                             <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
                                 <a>
-                                    <img src={mail_gradient_ic}></img>
+                                    <img src={clipboard_ic}></img>
                                     Copiar
                                 </a>
                             </CopyToClipboard>
@@ -155,19 +155,19 @@ function Contato(props) {
                     </a>
                     <div className="menu-contact-box three-options">
                         <div className="box">
-                            <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
-                                <img src={mail_gradient_ic}></img>
+                            <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
+                                <img src={whatsapp_gradient_ic}></img>
                                 Chamar
                             </a>
                             <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
                                 <a>
-                                    <img src={mail_gradient_ic}></img>
+                                    <img src={clipboard_ic}></img>
                                     Copiar
                                 </a>
                             </CopyToClipboard>
-                            <a href="tel:+5513981262295" target="_blank">
-                                <img src={mail_gradient_ic}></img>
-                                Chamar
+                            <a href="tel:+5513981262295">
+                                <img src={cellphone_gradient_ic}></img>
+                                Ligar
                             </a>
                         </div>
                     </div>
@@ -180,13 +180,13 @@ function Contato(props) {
                     </a>
                     <div className="menu-contact-box">
                         <div className="box">
-                            <a href="tel:+5513981235835" target="_blank">
-                                <img src={mail_gradient_ic}></img>
+                            <a href="tel:+5513981235835">
+                                <img src={cellphone_gradient_ic}></img>
                                 Ligar
                             </a>
                             <CopyToClipboard text="+55 13 98123-5835" onCopy={copy}>
                                 <a>
-                                    <img src={mail_gradient_ic}></img>
+                                    <img src={clipboard_ic}></img>
                                     Copiar
                                 </a>
                             </CopyToClipboard>
