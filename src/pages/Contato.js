@@ -17,6 +17,7 @@ import clipboard_ic from '../images/icons/clipboard-ic.svg'
 import x_ic from '../images/icons/x-ic.svg'
 import hand_ic from '../images/icons/hand-ic.svg'
 import loading_ic from '../images/icons/loading-ic.svg'
+import reticences_ic from '../images/icons/reticences-ic.svg'
 
 import FollowTo from '../components/FollowTo.js'
 
@@ -80,10 +81,14 @@ function Contato(props) {
     }
 
     const func_2 = (e) => {
+        if (e.target.classList.contains('reticences')) return
+
         const [x, y] = [e.clientX, e.clientY]
-        const ver = document.elementsFromPoint(x, y)
+        const ver = document.elementsFromPoint(x, y)        
+        
         if (ver.some(el => el.classList.contains('menu-contact-box')) || !ver.some(el => el.classList.contains('contact-box'))) {
-            document.querySelector('.contact-box .menu-contact-box.on').classList.remove('on')
+            const el = document.querySelector('.contact-box .menu-contact-box.on')
+            el && el.classList.remove('on')
             window.removeEventListener('click', func_2)
         }
     }
@@ -91,23 +96,31 @@ function Contato(props) {
     function onClick(e) {
         window.removeEventListener('click', func_2)
         window.addEventListener('click', func_2)
-        const el = e.currentTarget
+
+        const target = e.currentTarget
+        const el = e.currentTarget.parentElement
+        const id = el.id
+        const menu_on = document.querySelector('.contact-box .menu-contact-box.on')
+        const menu = document.querySelector(`.menu-contact-box[finder="${id}"]`)
+
+        if(target.classList.contains('reticences') && menu_on) {
+            if (menu_on.getAttribute('finder') === id) { menu_on.classList.remove('on'); return }
+        }
+
         const ver = Array.from(el.querySelectorAll(':hover'))
         if (ver.some(el => el.classList.contains('menu-contact-box'))) return
-        const menu = el.querySelector('.menu-contact-box')
-        const menu_on = document.querySelector('.contact-box .menu-contact-box.on')
-
 
         const func_1 = () => {
             const x = e.clientX
             const y = e.clientY
-    
-            const refX = el.getBoundingClientRect().left
-            const refY = el.getBoundingClientRect().top
+            
+            let distX = x + 10
+            let distY = y + 10
+            
             menu.style.transitionDuration = '400ms'
-            let distX = x - refX + 20
-            let distY = y - refY + 20
-            if (refX + distX + menu.querySelector('.box').offsetWidth + 20 > window.innerWidth) distX -= menu.querySelector('.box').offsetWidth + 30
+            
+            if (distX + menu.querySelector('.box').offsetWidth + 20 > window.innerWidth) distX -= menu.querySelector('.box').offsetWidth + 30
+            
             menu.style.transform = `translate(${distX}px, ${distY}px)`
             menu.classList.add('on')
             menu_on && menu_on.removeEventListener('transitionend', func_1)
@@ -130,12 +143,13 @@ function Contato(props) {
                 <h1 className="title">Contato </h1>
                 <div className="title-divisor divisor"></div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
-                <div className="contact-box" onClick={onClick}>
-                    <a>
+                <div className="contact-box" id="email_1">
+                    <a onClick={onClick}>
                         <img src={mail_gradient_ic}></img>
                         rafael.funchal@outlook.com
                     </a>
-                    <div className="menu-contact-box">
+                    <img src={reticences_ic} className="reticences" onClick={onClick}></img>
+                    <div className="menu-contact-box" finder="email_1">
                         <div className="box">
                             <a href="mailto:rafael.funchal@outlook.com" target="_blank">
                                 <img src={mail_gradient_ic}></img>
@@ -151,12 +165,13 @@ function Contato(props) {
                     </div>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
-                <div className="contact-box" onClick={onClick}>
-                    <a>
+                <div className="contact-box" id="cell_1">
+                    <a onClick={onClick}>
                         <img src={whatsapp_gradient_ic}></img>
                         +55 13 98126-2295
                     </a>
-                    <div className="menu-contact-box three-options">
+                    <img src={reticences_ic} className="reticences" onClick={onClick}></img>
+                    <div className="menu-contact-box three-options" finder="cell_1">
                         <div className="box">
                             <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
                                 <img src={whatsapp_gradient_ic}></img>
@@ -176,12 +191,13 @@ function Contato(props) {
                     </div>
                 </div>
                 <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
-                <div className="contact-box" onClick={onClick}>
-                    <a>
+                <div className="contact-box" id="cell_2">
+                    <a onClick={onClick}>
                         <img src={cellphone_gradient_ic}></img>
                         +55 13 98123-5835
                     </a>
-                    <div className="menu-contact-box">
+                    <img src={reticences_ic} className="reticences" onClick={onClick}></img>
+                    <div className="menu-contact-box" finder="cell_2">
                         <div className="box">
                             <a href="tel:+5513981235835">
                                 <img src={cellphone_gradient_ic}></img>

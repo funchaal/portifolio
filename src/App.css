@@ -924,8 +924,18 @@ header .home-contact img:last-child {
   transition-duration: 500ms;
 }
 
-.contact-box .menu-contact-box {
+.contact-box > img {
   position: absolute;
+  cursor: pointer;
+  left: 100%;
+  width: 20px;
+  margin-left: 10px;
+}
+
+.contact-box .menu-contact-box {
+  position: fixed;
+  top: 0;
+  left: 0;
   max-width: 0;
   max-height: 0;
   width: 128px;
@@ -966,7 +976,7 @@ header .home-contact img:last-child {
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
-  padding: 6px 20px 6px 10px;
+  padding: 6px 20px 6px 12px;
   font-size: 1.2em;
   background-color: rgb(47, 47, 47);
   border-radius: 5px;
@@ -978,7 +988,7 @@ header .home-contact img:last-child {
 }
 
 .contact-box .menu-contact-box a img {
-  margin-right: 10px;
+  margin-right: 12px;
   pointer-events: none;
 }
 
@@ -1171,6 +1181,7 @@ header .home-contact img:last-child {
   background: rgb(56, 56, 56);
   color: rgb(255, 255, 255);
   caret-color: yellow;
+  border: 1px solid cyan;
 } /* ok */
 
 input[type="search"]::-webkit-search-decoration,
@@ -2291,6 +2302,9 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  .contact-box .menu-contact-box a:hover {
+    background-color: rgb(47, 47, 47);
+  }
   #menu .ctn button.marker, #follow_to .box .marker-ft {
     background: transparent;
     filter: none;
