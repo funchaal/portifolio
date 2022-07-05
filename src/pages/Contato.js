@@ -105,13 +105,16 @@ function Contato(props) {
             const refX = el.getBoundingClientRect().left
             const refY = el.getBoundingClientRect().top
             menu.style.transitionDuration = '400ms'
-            menu.style.transform = `translate(${x - refX + 20}px, ${y - refY + 20}px)`
+            let distX = x - refX + 20
+            let distY = y - refY + 20
+            if (refX + distX + menu.querySelector('.box').offsetWidth + 20 > window.innerWidth) distX -= menu.querySelector('.box').offsetWidth + 30
+            menu.style.transform = `translate(${distX}px, ${distY}px)`
             menu.classList.add('on')
             menu_on && menu_on.removeEventListener('transitionend', func_1)
         }
 
         if (menu_on) {
-            menu_on.style.transitionDuration = '200ms'
+            menu_on.style.transitionDuration = '300ms'
             menu_on.classList.remove('on')
             menu_on.addEventListener('transitionend', func_1)
             return
