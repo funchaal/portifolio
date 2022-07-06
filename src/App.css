@@ -924,7 +924,7 @@ header .home-contact img:last-child {
   transition-duration: 500ms;
 }
 
-.contact-box > img {
+.contact-box > .reticences {
   position: absolute;
   cursor: pointer;
   left: 100%;
