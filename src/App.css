@@ -935,7 +935,6 @@ header .home-contact img:last-child {
 .contact-box .menu-contact-box {
   position: fixed;
   top: 0;
-  left: 0;
   max-width: 0;
   max-height: 0;
   width: 128px;

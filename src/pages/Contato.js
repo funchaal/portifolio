@@ -125,7 +125,14 @@ function Contato(props) {
             
             menu.style.transitionDuration = '400ms'
             
-            if (distX + menu.querySelector('.box').offsetWidth + 20 > window.innerWidth) distX -= menu.querySelector('.box').offsetWidth + 30
+            if (distX + menu.querySelector('.box').offsetWidth + 20 > window.innerWidth) {
+                distX = -(window.innerWidth - distX)
+                menu.style.left = 'unset'
+                menu.style.right = 0
+            } else {
+                menu.style.left = 0
+                menu.style.right = 'unset'
+            }
             
             menu.style.transform = `translate(${distX}px, ${distY}px)`
             menu.classList.add('on')
