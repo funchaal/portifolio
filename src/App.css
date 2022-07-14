@@ -164,7 +164,7 @@ header {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 120px 60px 50px 10vw;
-  width: 58vw;
+  width: 62vw;
   height: 100%;
 }
 
@@ -172,7 +172,7 @@ header {
   position: fixed;
   top: 0;
   right: 10px;
-  width: calc(42vw - 10px);
+  width: calc(38vw - 10px);
   height: 100%;
   padding: 0 20px;
 }
@@ -1478,7 +1478,7 @@ p.default {
   max-width: 100%;
   margin: 20px 0;
   font-size: 1.5em;
-  text-align: justify;
+  /* text-align: justify; */
   text-indent: 5vw;
   line-height: normal;
   opacity: 0;
