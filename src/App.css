@@ -1575,7 +1575,8 @@ button.link-content img {
 }
 
 @media (max-width: 599px) {
-  p.default > img, p.default > video {
+  .image-box {
+    align-self: center;
     max-width: 100%;
   }
 }
