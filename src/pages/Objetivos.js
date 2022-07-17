@@ -21,7 +21,7 @@ function Objetivos(props) {
                     Pretendo me preparar durante esse período para tentar ingressar no IME e prestar vestibular para a polícia federal após a graduação, já que é exigido uma graduação para o concurso.
                 </p>
                 <p className="default">
-                    No entanto, por ora, estou em busca de desenvolver meu perfil profissional, portanto, estou aberto à diversas propostas.
+                    No entanto, por enquanto estou em busca de desenvolver meu perfil profissional, então estou aberto à diversas propostas.
                 </p>
                 <FollowTo name="objetivos"/>
             </div>

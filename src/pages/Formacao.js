@@ -19,7 +19,7 @@ function graduations() {
                 <h1 className="title">Formação </h1>
                 <div className="title-divisor divisor"></div>
                 <h3>Fundamental II</h3>
-                <div className="subtitle-divisor divisor"></div>
+                <div className="subtitle-divisor divisor formation"></div>
                 <p className="default">Cursei o fundamental II, do 6º ao 9º ano no Dr. Napoleão Rodrigues Laureano de 2016 à 2019.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">
@@ -30,7 +30,7 @@ function graduations() {
                     <a href={fundamental_ce} target="_blank" className="certificate">Ver certificado</a>
                 </div>
                 <h3>Ensino Médio</h3>
-                <div className="subtitle-divisor divisor"></div>
+                <div className="subtitle-divisor divisor formation"></div>
                 <p className="default">Cursei os três anos do ensino médio na Etec Alberto Santos Dumont no Guarujá com enfase em ciências exatas e engenharias de 2020 à 2022.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">
@@ -41,8 +41,8 @@ function graduations() {
                     <a href="" target="_blank" className="certificate">Ver certificado</a>
                 </div>
                 <h3>Línguas</h3>
-                <div className="subtitle-divisor divisor"></div>
-                <p className="default">Fiz inglês avançado na Green House Idiomas entre 2016 e 2021 com carga horária de 718 horas.</p>
+                <div className="subtitle-divisor divisor formation"></div>
+                <p className="default">Fiz inglês na Green House Idiomas entre 2016 e 2021 com carga horária de 718 horas.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">
                     <img src={graduations_ic}></img>
@@ -52,7 +52,7 @@ function graduations() {
                     <a href={english_ce} target="_blank" className="certificate">Ver certificado</a>
                 </div>
                 <h3>Nível técnico</h3>
-                <div className="subtitle-divisor divisor"></div>
+                <div className="subtitle-divisor divisor formation"></div>
                 <p className="default">Cursei técnico em comércio exterior na Etec Dona Escolástica Rosa em Santos em 2021 com duração de 1 ano.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">
@@ -63,7 +63,7 @@ function graduations() {
                     <a href="" target="_blank" className="certificate">Ver certificado</a>
                 </div>
                 <h3>Outros cursos</h3>
-                <div className="subtitle-divisor divisor"></div>
+                <div className="subtitle-divisor divisor formation"></div>
                 <p className="default">Também realizei diversos cursos extracurriculares, abaixo estão os principais.</p>
                 <div className="divisor formation-divisor"></div>
                 <div className="formation-item">

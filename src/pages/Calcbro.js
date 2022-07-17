@@ -22,27 +22,39 @@ function Calcbro(props) {
                     Atualmente ele está em versão de desenvolvimento porém utilizável. Dei uma diminuída em seu desenvolvimento para focar em estudos mais avançados.
                 </p>
                 <p className="default">
-                    O site não está hospedado para evitar gastos desnecessários com servidores etc. Porém o projeto está completo em meu github.
+                    O site não está hospedado para evitar gastos desnecessários com servidores. Porém o projeto está completo no meu github.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={calcbro_overview_vi} type="video/mp4"/>
                     </video>
+                    <div class="image-divisor bottom"></div>
                     <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    </div>
                 </p>
                 <h3>Visão geral no celular</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
-                    Como o site é responsivo, abaixo está uma demonstração geral do site no celular em sua versão primária. 
+                    Como o site é responsivo, abaixo está uma demonstração geral do site no celular em sua primeira versão. 
+                                        <div className="image-box" style={{ alignSelf: 'center' }}>
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={calcbro_overview_cellphone_vi} type="video/mp4"/>
                     </video>
+                    <div class="image-divisor bottom"></div>
+                    </div>
                 </p>
                 <h3>Sistema de usuário no celular</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
-                    Já aqui, é ademonstração do cadastro, validação e alteração de dados de usuários. Lembrando que o back-end para validação conta com um sistema de tonkens que são validados constantemente de forma camuflada, após cada interação feita com o banco de dados.
+                    Já aqui, é a demonstração do cadastro, validação e alteração de dados de usuários. Lembrando que o back-end para validação conta com um sistema de tonkens que são validados constantemente de forma camuflada, após cada interação feita com o banco de dados.
+                                        <div className="image-box" style={{ alignSelf: 'center' }}>
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={calcbro_login_cellphone_vi} type="video/mp4"/>
                     </video>
+                    <div class="image-divisor bottom"></div>
+                    </div>
                 </p>
                 <FollowTo name="calcBro"/>
             </div>

@@ -207,7 +207,7 @@ header {
 .formation-divisor {
   width: 10vw;
   min-width: 100px;
-  margin: 10px 0 5px 20px;
+  margin: 30px 0 5px 5px;
   opacity: 0;
   animation: fade-in 1000ms ease-out forwards 2000ms;
 }
@@ -868,7 +868,7 @@ header .home-contact img:last-child {
 .item-box {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   max-width: 100%;
   margin-bottom: 10px;
@@ -1471,39 +1471,88 @@ select:-webkit-autofill:focus {
 } /* ok */
 
 p.default {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 100%;
-  margin: 20px 0;
+  margin-top: 20px;
   font-size: 1.5em;
-  /* text-align: justify; */
-  text-indent: 5vw;
   line-height: normal;
   opacity: 0;
   animation: fade-in-up 1000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 1000ms;
 }
 
-p.default > img, p.default > video {
-  position: relative;
-  max-width: calc(100% - 70px);
-  max-height: 500px;
-  margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 20px;
+p.default .image-box > img, p.default .image-box > video {
+  max-width: calc(100% - 1.5vw);
+  max-height: 550px;
   border-radius: 15px;
-  border: 2px solid var(--main-blue);
-  opacity: 0;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(100% - 70px + 1.5vw);
+  align-self: flex-start;
+  opacity: 0;
   animation: fade-in 1000ms ease-out forwards 1500ms;
+  margin: 40px 0 20px 0;
+}
+
+.image-divisor {
+  position: relative;
+  height: 4px;
+  border-radius: 10px;
+  background-image: var(--main-gradient-r);
+}
+
+/* background: linear-gradient(to right, rgb(255, 0, 43), rgb(255, 0, 247)); */
+
+.image-divisor.top {
+  align-self: flex-start;
+  width: 190px;
+  margin-bottom: 25px;
+  margin-left: 0.5vw;
+  animation: image-divisor-top 5000ms ease-in-out infinite alternate;
+}
+
+.image-divisor.bottom {
+  align-self: flex-end;
+  width: 250px;
+  margin-top: 25px;
+  right: 0;
+  animation: image-divisor-bottom 6000ms ease-in-out infinite alternate;
+}
+
+@keyframes image-divisor-top {
+  from {
+    width: 190px;
+  }
+  to {
+    width: 140px;
+  }
+}
+
+@keyframes image-divisor-bottom {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 150px;
+  }
 }
 
 button.link-content {
+  align-self: flex-end;
   max-width: 300px;
-  margin: 10px 40px 20px auto;
   background-color: transparent;
-  box-shadow: none;
+  margin-top: 20px;
+  padding: 8px 20px;
+  border-radius: 15px;
+  background: linear-gradient(to right, rgba(255, 0, 21), rgba(255, 0, 179));
 }
 
 button.link-content a {
@@ -1514,11 +1563,10 @@ button.link-content a {
 
 button.link-content span {
   max-width: 100%;
-  font-size: 1.2em;
+  font-size: 1.4em;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: cyan;
 }
 
 button.link-content img {
@@ -1596,7 +1644,7 @@ p.default > span {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0 0 15px 20px;
+  margin: 20px 0 15px 20px;
   font-size: 0.9em;
   opacity: 0;
   animation: fade-in 1000ms ease-out forwards 1500ms;
