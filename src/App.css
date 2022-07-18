@@ -213,9 +213,11 @@ header {
 }
 
 .formation-divisor {
-  width: 10vw;
-  min-width: 100px;
-  margin: 30px 0 5px 5px;
+  position: absolute;
+  left: -30px;
+  background-image: var(--main-gradient-b);
+  width: 4px;
+  height: 60%;
   opacity: 0;
   animation: fade-in 1000ms ease-out forwards 2000ms;
 }
@@ -827,7 +829,7 @@ header .home-contact img:last-child {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin: 0 2vw 20px 2vw;
+  margin: 20px 2vw 20px 30px;
   padding: 15px 20px 15px 50px;
   border-radius: 20px;
   opacity: 0;
@@ -2310,10 +2312,6 @@ p.default > span {
 
   .formation-item .name, .formation-item .date {
     max-width: 100%;
-  }
-
-  .formation-divisor {
-    margin-left: 0;
   }
 
   .side.right {
