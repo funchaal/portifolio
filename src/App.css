@@ -168,6 +168,14 @@ header {
   height: 100%;
 }
 
+.side.left.home {
+  width: 58vw;
+}
+
+.side.right {
+  width: calc(42vw - 10px);
+}
+
 .side.right {
   position: fixed;
   top: 0;
@@ -2128,7 +2136,7 @@ p.default > span {
     width: 80vw;
   }
   
-  .side.left {
+  .side.left, .side.left.home {
     padding-top: 100px !important;
     width: 800px;
     max-width: 100%;

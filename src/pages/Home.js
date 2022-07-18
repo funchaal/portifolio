@@ -65,7 +65,7 @@ function Home(props) {
 
     return (
         <div id="main_container" onMouseMove={mouseMv} onMouseOut={mouseOt}>
-          <div className="side left" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', padding: 0, marginLeft: '50px' }}>
+          <div className="side left home" style={{ height: '100vh', justifyContent: 'center', alignItems: 'center', padding: 0, marginLeft: '50px' }}>
             <div id="intro_title_ctn">
               <div id="intro_title_box">
                 <h1>Rafael <br></br>Funchal</h1>
@@ -80,7 +80,7 @@ function Home(props) {
             </div>
           </div>
           </div>
-          <div className="right side" style={{ justifyContent: 'center', paddingTop: '10vh' }}>
+          <div className="right side home" style={{ justifyContent: 'center', paddingTop: '10vh' }}>
             <div></div>
             <div id="cs_ctn">
               <div className="box">
