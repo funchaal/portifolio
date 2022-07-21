@@ -65,6 +65,7 @@ h1 {
 h3 {
   max-width: 400px;
   margin: 40px auto 0 auto;
+  padding: 0 10px;
   font-style: italic;
   font-size: 1.7em;
   text-align: center;
@@ -890,7 +891,7 @@ header .home-contact img:last-child {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 5px;
+  margin: 5px 5px 5px 0;
   padding: 5px 15px;
   border-radius: 20px;
   border: 1px solid rgb(87, 87, 87);
@@ -1190,7 +1191,7 @@ header .home-contact img:last-child {
   background: rgb(56, 56, 56);
   color: rgb(255, 255, 255);
   caret-color: yellow;
-  border: 1px solid cyan;
+  border: 1px solid rgb(81, 81, 81);
 } /* ok */
 
 input[type="search"]::-webkit-search-decoration,
@@ -1556,13 +1557,12 @@ p.default .image-box > img, p.default .image-box > video {
 }
 
 button.link-content {
-  align-self: flex-end;
   max-width: 300px;
   background-color: transparent;
-  margin-top: 20px;
+  margin-top: 40px;
   padding: 8px 20px;
   border-radius: 15px;
-  background: linear-gradient(to right, rgba(255, 0, 21), rgba(255, 0, 179));
+  background: linear-gradient(to right, rgb(255, 0, 43), rgb(255, 0, 230));
 }
 
 button.link-content a {
@@ -2382,7 +2382,7 @@ p.default > span {
     filter: none;
   }
   .contact-box {
-    margin: 0 0 15px 1vw;
+    margin: 20px 0 15px 1vw;
   }
   .contact-box a:hover, .contact-box.location:hover {
     filter: none;
