@@ -2138,7 +2138,7 @@ p.default > span {
     width: 80vw;
   }
   
-  .side.left, .side.left.home {
+  .side.left {
     padding-top: 100px !important;
     width: 800px;
     max-width: 100%;
@@ -2146,6 +2146,10 @@ p.default > span {
     padding-right: 40px !important;
     margin: 0 !important;
     height: 100% !important;
+  }
+  
+  .side.left.home {
+    width: 800px;
   }
 
   #main_container {
@@ -2279,6 +2283,13 @@ p.default > span {
 }
 
 @media (max-width: 700px) {
+  #intro_title_ctn .more p {
+    text-align: start;
+  }
+  .side.left {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
   #intro_title_ctn button {
     display: none;
   }
@@ -2356,6 +2367,13 @@ p.default > span {
 }
 
 @media (max-width: 499px) {
+  h1 {
+    margin: unset;
+  }
+  .title-divisor {
+    margin-left: unset;
+    margin-right: unset;
+  }
   .contact-box .menu-contact-box a:hover {
     background-color: rgb(47, 47, 47);
   }
@@ -2394,11 +2412,6 @@ p.default > span {
   }
   main::-webkit-scrollbar {
     width: 0px;
-  }
-
-  .side.left {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
   }
   body {
     background: rgba(35, 35, 35);
