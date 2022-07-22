@@ -1,26 +1,27 @@
 const func_2 = (e) => {
-    if (e.target.classList.contains('reticences')) return
+    if (e.target.ClassList && e.target.classList.contains('reticences')) return
 
     const [x, y] = [e.clientX, e.clientY]
     let sc = false
     if (!x) sc = true
 
-    const ver = sc ? []: document.elementsFromPoint(x, y)
+    const ver = sc ? [] : document.elementsFromPoint(x, y)
     
     if (sc || ver.some(el => el.classList.contains('menu-contact-box')) || !ver.some(el => el.classList.contains('no'))) {
-        setTimeout(() => {
-            const el = document.querySelector('.menu-contact-box.on')
-            el && el.classList.remove('on')
-            window.removeEventListener('mousedown', func_2)
-            document.querySelector('main').removeEventListener('scroll', func_2)
-        }, 100)
+        const el = document.querySelector('.menu-contact-box.on')
+        el && el.classList.remove('on')
+        window.removeEventListener('resize', func_2)
+        window.removeEventListener('click', func_2)
+        document.querySelector('main').removeEventListener('scroll', func_2)
     }
 }
 
 function floatingMenu(e) {
-    window.removeEventListener('mousedown', func_2)
+    window.removeEventListener('resize', func_2)
+    window.removeEventListener('click', func_2)
     document.querySelector('main').removeEventListener('scroll', func_2)
-    window.addEventListener('mousedown', func_2)
+    window.addEventListener('resize', func_2)
+    window.addEventListener('click', func_2)
     document.querySelector('main').addEventListener('scroll', func_2)
 
     const target = e.currentTarget
