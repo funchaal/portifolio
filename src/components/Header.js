@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 
+import CopyToClipboard from 'react-copy-to-clipboard'
+
 import Searchbar from './Searchbar'
 import Menu from './Menu'
 
@@ -11,6 +13,23 @@ import hand_ic from '../images/icons/hand-ic.svg'
 import lupa_ic from '../images/icons/lupa-ic.svg'
 import contact_ic from '../images/icons/contact-ic.svg'
 import small_arrow_gradient from '../images/icons/small-arrow-gradient.svg'
+import whatsapp_gradient_ic from '../images/icons/whatsapp-gradient-ic.svg'
+import cellphone_gradient_ic from '../images/icons/cellphone-gradient-ic.svg'
+
+import floatingMenu from '../modules/floatingMenu.js'
+
+import sendMessage from '../modules/message.js'
+
+import mail_gradient_ic from '../images/icons/mail-gradient-ic.svg'
+import clipboard_ic from '../images/icons/clipboard-ic.svg'
+
+function copy(string, success) {
+  if (success) {
+      sendMessage('Copiado!', 'green')
+  } else {
+      sendMessage('Houve um erro ao copiar :/', 'red')
+  }
+}
 
 function Header() {
     return (
@@ -26,17 +45,54 @@ function Header() {
             </div>
             <Searchbar />
             <div id="header_contact">
-              <div className="box">
-                <img src={mail_ic} alt=""></img>
-                <span>rafael.funchal@outlook.com</span>
+              <div className="box no" id="email_1_header">
+                <a onClick={floatingMenu}>
+                  <img src={mail_ic} alt=""></img>
+                  <span>rafael.funchal@outlook.com</span>
+                </a>
+                  <div className="menu-contact-box" finder="email_1_header">
+                      <div className="menu-contact-ctn">
+                          <a href="mailto:rafael.funchal@outlook.com" target="_blank">
+                              <img src={mail_gradient_ic}></img>
+                              Enviar
+                          </a>
+                          <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
+                              <a>
+                                  <img src={clipboard_ic}></img>
+                                  Copiar
+                              </a>
+                          </CopyToClipboard>
+                      </div>
+                  </div>
               </div>
               <span>|</span>
-                <div className="box">
-                  <img src={whatsapp_ic} alt="" style={{ width: '16px' }}></img>
-                  <span>(13) 98126-2295</span>
+                <div className="box no" id="cell_1_header">
+                  <a onClick={floatingMenu}>
+                    <img src={whatsapp_ic} alt="" style={{ width: '16px' }}></img>
+                    <span>(13) 98126-2295</span>
+                  </a>
+                  <div className="menu-contact-box three-options" finder="cell_1_header">
+                        <div className="menu-contact-ctn">
+                            <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
+                                <img src={whatsapp_gradient_ic}></img>
+                                Chamar
+                            </a>
+                            <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
+                                <a>
+                                    <img src={clipboard_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
+                            <a href="tel:+5513981262295">
+                                <img src={cellphone_gradient_ic}></img>
+                                Ligar
+                            </a>
+                        </div>
+                    </div>
               </div>
               <span>|</span>
               <div className="box location" onClick={(e) => e.currentTarget.classList.toggle('on')}>
+                
                   <img src={location_ic} alt="" className="hide" style={{ height: '18px' }}></img>
                   <span className="hide">Guarujá - SP</span>
                   <img src={x_ic} className="x"></img>

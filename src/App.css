@@ -624,7 +624,8 @@ header {
   transition-duration: 200ms;
 }
 
-#header_contact .box {
+#header_contact .box > a, #header_contact > .box {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -661,7 +662,6 @@ header {
 #header_contact .location, .contact-box.location {
   position: relative;
   cursor: pointer;
-  z-index: 1;
 }
 
 #header_contact .location *, .contact-box.location * {
@@ -732,7 +732,7 @@ header {
   transition-timing-function: ease-out;
 }
 
-#header_contact .box img {
+#header_contact > .box > a img, #header_contact > .box > img {
   width: 18px;
   margin-right: 10px;
 }
@@ -943,9 +943,10 @@ header .home-contact img:last-child {
   margin-left: 10px;
 }
 
-.contact-box .menu-contact-box {
+.menu-contact-box {
   position: fixed;
   top: 0;
+  z-index: 1;
   max-width: 0;
   max-height: 0;
   width: 128px;
@@ -959,47 +960,49 @@ header .home-contact img:last-child {
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-.contact-box .menu-contact-box.on {
+.menu-contact-box.on {
   max-width: 128px;
   max-height: 70px;
   opacity: 100%;
 }
 
-.contact-box .menu-contact-box .box {
+.menu-contact-box .menu-contact-ctn {
   width: 128px;
   height: 70px;
   padding: 4px 0;
 }
 
-.contact-box .menu-contact-box.on.three-options {
+.menu-contact-box.on.three-options {
   max-height: 101px;
   height: 101px;
 }
 
-.contact-box .menu-contact-box.three-options .box {
+.menu-contact-box.three-options .menu-contact-ctn {
   height: 101px;
 }
 
-.contact-box .menu-contact-box a {
+.menu-contact-box a {
   display: flex;
   cursor: pointer;
   flex-direction: row;
   align-items: center;
   white-space: nowrap;
   padding: 6px 20px 6px 12px;
-  font-size: 1.2em;
+  font-size: 1.05rem;
   background-color: rgb(47, 47, 47);
   border-radius: 5px;
   transition-duration: 500ms;
 }
 
-.contact-box .menu-contact-box a:hover {
+.menu-contact-box a:hover {
   background-color: rgb(83, 83, 83);
 }
 
-.contact-box .menu-contact-box a img {
-  margin-right: 12px;
+.menu-contact-box a img {
   pointer-events: none;
+  width: 20px;
+  max-height: 17px;
+  margin-right: 15px;
 }
 
 .contact-box > a:hover, .contact-box.location:hover {
@@ -2374,7 +2377,7 @@ p.default > span {
     margin-left: unset;
     margin-right: unset;
   }
-  .contact-box .menu-contact-box a:hover {
+  .menu-contact-box a:hover {
     background-color: rgb(47, 47, 47);
   }
   #menu .ctn button.marker, #follow_to .box .marker-ft {
