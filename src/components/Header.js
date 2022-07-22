@@ -50,7 +50,7 @@ function Header() {
                   <img src={mail_ic} alt=""></img>
                   <span>rafael.funchal@outlook.com</span>
                 </a>
-                  <div className="menu-contact-box" finder="email_1_header">
+                  <div className="menu-contact-box" finder="email_1_header" keep-left="true">
                       <div className="menu-contact-ctn">
                           <a href="mailto:rafael.funchal@outlook.com" target="_blank">
                               <img src={mail_gradient_ic}></img>
@@ -71,7 +71,7 @@ function Header() {
                     <img src={whatsapp_ic} alt="" style={{ width: '16px' }}></img>
                     <span>(13) 98126-2295</span>
                   </a>
-                  <div className="menu-contact-box three-options" finder="cell_1_header">
+                  <div className="menu-contact-box three-options" finder="cell_1_header" keep-left="true">
                         <div className="menu-contact-ctn">
                             <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
                                 <img src={whatsapp_gradient_ic}></img>

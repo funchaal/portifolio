@@ -46,7 +46,7 @@ function floatingMenu(e) {
         
         menu.style.transitionDuration = '400ms'
         
-        if (distX + menu.querySelector('.menu-contact-ctn').offsetWidth + 20 > window.innerWidth) {
+        if (menu.hasAttribute('keep-left') || distX + menu.querySelector('.menu-contact-ctn').offsetWidth + 20 > window.innerWidth) {
             distX = -(window.innerWidth - distX)
             menu.style.left = 'unset'
             menu.style.right = 0
