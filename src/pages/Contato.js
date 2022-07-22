@@ -93,7 +93,9 @@ function Contato(props) {
                         <img src={mail_gradient_ic}></img>
                         rafael.funchal@outlook.com
                     </a>
-                    <img src={reticences_ic} className="reticences" onClick={floatingMenu}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
                     <div className="menu-contact-box" finder="email_1">
                         <div className="menu-contact-ctn">
                             <a href="mailto:rafael.funchal@outlook.com" target="_blank">
@@ -115,7 +117,9 @@ function Contato(props) {
                         <img src={whatsapp_gradient_ic}></img>
                         +55 13 98126-2295
                     </a>
-                    <img src={reticences_ic} className="reticences" onClick={floatingMenu}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
                     <div className="menu-contact-box three-options" finder="cell_1">
                         <div className="menu-contact-ctn">
                             <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
@@ -141,7 +145,9 @@ function Contato(props) {
                         <img src={cellphone_gradient_ic}></img>
                         +55 13 98123-5835
                     </a>
-                    <img src={reticences_ic} className="reticences" onClick={floatingMenu}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
                     <div className="menu-contact-box" finder="cell_2">
                         <div className="menu-contact-box">
                             <a href="tel:+5513981235835">

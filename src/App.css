@@ -937,10 +937,18 @@ header .home-contact img:last-child {
 
 .contact-box > .reticences {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   cursor: pointer;
   left: 100%;
-  width: 20px;
   margin-left: 10px;
+  height: 100%;
+}
+
+.contact-box > .reticences img {
+  pointer-events: none;
+  width: 20px;
 }
 
 .menu-contact-box {

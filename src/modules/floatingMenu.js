@@ -1,10 +1,10 @@
 const func_2 = (e) => {
-    if (e.target.ClassList && e.target.classList.contains('reticences')) return
-
+    if (e.target.classList && e.target.classList.contains('reticences')) return
+    
     const [x, y] = [e.clientX, e.clientY]
     let sc = false
     if (!x) sc = true
-
+    
     const ver = sc ? [] : document.elementsFromPoint(x, y)
     
     if (sc || ver.some(el => el.classList.contains('menu-contact-box')) || !ver.some(el => el.classList.contains('no'))) {
@@ -37,6 +37,7 @@ function floatingMenu(e) {
     const ver = Array.from(el.querySelectorAll(':hover'))
     if (ver.some(el => el.classList.contains('menu-contact-box'))) return
 
+    
     const func_1 = () => {
         const x = e.clientX
         const y = e.clientY
