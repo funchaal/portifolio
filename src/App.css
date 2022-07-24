@@ -500,6 +500,7 @@ header {
   width: 250px;
   border-radius: 50px;
   background-image: linear-gradient(to bottom right, rgb(0, 210, 88), rgb(0, 103, 187));
+  /* background-image: linear-gradient(to left, rgb(199, 0, 199), rgb(0, 47, 255)); */
   margin-top: 10px;
 }
 
@@ -530,7 +531,6 @@ header {
 }
 
 #intro_title_ctn.on {
-  margin-bottom: 5vh;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
