@@ -149,7 +149,7 @@ function Contato(props) {
                         <img src={reticences_ic}></img>
                     </div>
                     <div className="menu-contact-box" finder="cell_2">
-                        <div className="menu-contact-box">
+                        <div className="menu-contact-ctn">
                             <a href="tel:+5513981235835">
                                 <img src={cellphone_gradient_ic}></img>
                                 Ligar

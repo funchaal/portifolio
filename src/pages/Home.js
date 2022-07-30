@@ -74,8 +74,8 @@ function Home(props) {
               </div>
               <div className="divisor more-home-divisor"></div>
             <div className="more">
-              <p>Olá, meu nome é Rafael, tenho 16 anos, sou formado em Técnico em Comércio Exterior e sou apaixonado em programação e ciência de dados. Iniciei na programação aos 11 anos de idade. Hoje, me especializo em javascript e React para desenvolvimento web full-stack e me dedico na área de ciência de dados.</p>
-              <p className="hide">Devido à experiencia que obtive na área da programação por estudar desde pequeno, além de ter feito diversos cursos relacionados, também acumulei conhecimentos consolidados em excel, vba, autoCAD, banco de dados, photoshop, entre outros. Além de ter inglês como segunda língua. Este portifólio foi criado por mim como uma forma de detalhar meu perfil profissional além do currículo, então basta navegar!</p>
+              <p>Olá, meu nome é Rafael, tenho 16 anos, sou técnico em comércio exterior e sou apaixonado em programação e ciência de dados. Iniciei na programação aos 11 anos de idade. Hoje, me especializo na área do desenvolvimento web com Node e React e me dedico nos estudos em ciência de dados.</p>
+              <p className="hide">Devido à experiencia que obtive na área da programação por estudar desde pequeno, e por ter feito diversos cursos relacionados, hoje tenho conhecimentos consolidados em excel com integração ao Visual Basics, autoCAD, banco de dados, photoshop, entre outros. Além de ter inglês como segunda língua. Este portifólio foi criado por mim como uma forma de detalhar meu perfil profissional além do currículo, então basta navegar!</p>
               <button type="button" onClick={() => document.getElementById('intro_title_ctn').classList.toggle('on')}></button>
             </div>
           </div>
