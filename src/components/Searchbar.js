@@ -1,6 +1,6 @@
-import lupa from '../images/lupa.svg'
-import arrow from '../images/arrow.svg'
-import x from '../images/x.svg'
+import lupa_ic from '../images/icons/lupa-ic.svg'
+import x_ic from '../images/icons/x-ic.svg'
+import small_arrow from '../images/icons/small-arrow.svg'
 
 import React, { useState, useEffect } from 'react'
 import { render } from 'react-dom'
@@ -42,11 +42,11 @@ function Searchbar() {
 	}
 
 	function altActive(e) {
-		if (e.key === 'ArrowDown') {
+		if (e.key === 'small_arrowDown') {
 			if (Active.index + 1 > document.querySelectorAll('#datalist li').length - 1) setActive({ index: 0, ok: true })
 			else setActive({ index: Active.index + 1, ok: true })
 		}
-		else if (e.key === 'ArrowUp') {
+		else if (e.key === 'small_arrowUp') {
 			if (Active.index - 1 < 0) setActive({ index: document.querySelectorAll('#datalist li').length - 1, ok: true })
 			else setActive({ index: Active.index - 1, ok: true })
 		}
@@ -59,6 +59,8 @@ function Searchbar() {
 		let val
 
 		if (window.innerWidth < 1200) document.getElementById('search_bar_form').style.display = 'none'
+
+		document.querySelector('main').scrollTop = 0
 
 		if (to) {
 			link = to
@@ -92,16 +94,16 @@ function Searchbar() {
 		<form id="search_bar_form" onSubmit={(e) => { e.preventDefault(); go() }}>
 			<input onInput={(e) => setString(e.target.value)} onKeyDown={altActive} list="search" type="search" name="" id="search_bar" placeholder="Search..." autoComplete="off"></input>
 			<button type="submit">
-				<img src={lupa}alt=""></img>
-				<img src={arrow}alt=""></img>
+				<img src={lupa_ic}alt=""></img>
+				<img src={small_arrow}alt=""></img>
 			</button>
-			<div className="x">
-				<img src={x} alt="" onClick={ () => { let sb = document.getElementById('search_bar'); sb.value = ''; setString(''); sb.focus() }}></img>
+			<div className="x" onClick={ () => { let sb = document.getElementById('search_bar'); sb.value = ''; setString(''); sb.focus() }}>
+				<img src={x_ic} alt=""></img>
 			</div>
-			<div className="arrow-back">
-				<img src={arrow} alt="" onClick={() => { document.getElementById('search_bar_form').style.display = 'none' }}></img>
+			<div className="small_arrow-back" onClick={() => { document.getElementById('search_bar_form').style.display = 'none' }}>
+				<img src={small_arrow} alt=""></img>
 			</div>
-			<div id="datalist"></div>
+			<div id="datalist" onClick={() => document.getElementById('search_bar').focus()}></div>
 		</form>
 	)
 }

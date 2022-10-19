@@ -1,11 +1,10 @@
 {
-    "redações": "/redacoes", 
-    "notas": "/notas", 
     "objetivos": "/objetivos", 
     "home": "/", 
     "calcBro": "/calcbro", 
     "habilidades": "/habilidades", 
     "projetos": "/projetos", 
     "estudos": "/estudos", 
+    "formação": "/graduations", 
     "contato": "/contato"
 }
