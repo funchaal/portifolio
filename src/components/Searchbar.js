@@ -42,11 +42,11 @@ function Searchbar() {
 	}
 
 	function altActive(e) {
-		if (e.key === 'small_arrowDown') {
+		if (e.key === 'ArrowDown') {
 			if (Active.index + 1 > document.querySelectorAll('#datalist li').length - 1) setActive({ index: 0, ok: true })
 			else setActive({ index: Active.index + 1, ok: true })
 		}
-		else if (e.key === 'small_arrowUp') {
+		else if (e.key === 'ArrowUp') {
 			if (Active.index - 1 < 0) setActive({ index: document.querySelectorAll('#datalist li').length - 1, ok: true })
 			else setActive({ index: Active.index - 1, ok: true })
 		}
@@ -66,7 +66,7 @@ function Searchbar() {
 			link = to
 			val = title
 		} else {
-			if (search_bar.value === '' || document.querySelector('#Pdatalist .no-data')) return
+			if (search_bar.value === '' || document.querySelector('#datalist .no-data')) return
 			const el_on = document.querySelector('#datalist li .on')
 			const el = el_on && Active.ok ? el_on : document.querySelector('#datalist li span')
 			link = el.getAttribute('link')
@@ -100,7 +100,7 @@ function Searchbar() {
 			<div className="x" onClick={ () => { let sb = document.getElementById('search_bar'); sb.value = ''; setString(''); sb.focus() }}>
 				<img src={x_ic} alt=""></img>
 			</div>
-			<div className="small_arrow-back" onClick={() => { document.getElementById('search_bar_form').style.display = 'none' }}>
+			<div className="arrow-back" onClick={() => { document.getElementById('search_bar_form').style.display = 'none' }}>
 				<img src={small_arrow} alt=""></img>
 			</div>
 			<div id="datalist" onClick={() => document.getElementById('search_bar').focus()}></div>

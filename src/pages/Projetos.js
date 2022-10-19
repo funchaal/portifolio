@@ -6,7 +6,7 @@ import download_ic from '../images/icons/download-ic.svg'
 import github_ic from '../images/icons/github-ic.svg'
 
 //Info videos
-import calcbro_vi from '../videos/info/calcbro-vi.mp4'
+import calcbro_overview_vi from '../videos/info/calcbro-overview-vi.mp4'
 import control_sheet_vi from '../videos/info/control-sheet-vi.mp4'
 import dashboard_water_vi from '../videos/info/dashboard-water-vi.mp4'
 import dashboard_wheather_vi from '../videos/info/dashboard-wheather-vi.mp4'
@@ -27,17 +27,17 @@ import documentation_sheet_fi from '../documents/Documentation Sheet.xlsm'
 import catapult_fi from '../documents/Catapult Model.dwg'
 import bridge_fi from '../documents/Bridge Model.dwg'
 
-function Projetos() {
+import FollowTo from '../components/FollowTo.js'
+
+function Projetos(props) {
     return (
         <div id="main_container">
             <div class="side left">
-                <h1 className="title">Projetos </h1>
+                <h1 className="title">Projetos</h1>
                 <div className="title-divisor divisor"></div>
+                <span className="media-loading-time-alert">Os vídeos podem levar um tempo para carregar</span>
                 <p className="default">
-                    Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins didáticos quanto para fins pessoais.
-                </p>
-                <p className="default">
-                    Abaixo listei alguns deles.
+                    Ao longo de meus estudos, desenvolvi diversos projetos, tanto para fins acadêmicos quanto para fins pessoais. Abaixo listei alguns deles.
                 </p>
                 <h3>Calcbro</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -48,10 +48,14 @@ function Projetos() {
                     O site foi feito para realizar contas especificas de matemática e foi idealizado inicialmente apenas como uma ferramenta para me auxilixar nas contas de atividades no ensino medio e do curso técnico. Porém continuei seu desenvolvimento e implementei mais funções além de contas como resolvedor de equações e ferramentas uteis como timer e sistema de sorteio, além do cadastro de usuários e um sistema CRUD completo.
                     Como se trata de uma aplicação complexa, atualmente ela se encontra em uma versão utilizável, entretanto, ainda em desenvolvimento.
                     O projeto está disponível em meu github.
+                                    <div className="image-box">
+                        <div class="image-divisor top"></div>
                 <video autoplay="autoplay" loop="loop" muted>
-                    <source src={calcbro_vi} type="video/mp4"/>
+                    <source src={calcbro_overview_vi} type="video/mp4"/>
                 </video>
-                <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                <div class="image-divisor bottom"></div>
+                <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                </div>
                 </p>
                 <h3>Planilha automatizada de gerenciamento de atividades</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -61,10 +65,14 @@ function Projetos() {
                 </p>
                 <p className="default">
                     Estou trabalhando numa versão aprimorada deste projeto para web, com SQL Server.
+                                    <div className="image-box">
+                        <div class="image-divisor top"></div>
                 <video autoplay="autoplay" loop="loop" muted>
                     <source src={control_sheet_vi} type="video/mp4"/>
                 </video>
-                <button type="button" className="link_btn download"><a href={control_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de gerenciamento</span></a></button>
+                <div class="image-divisor bottom"></div>
+                <button type="button" className="link-content download"><a href={control_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de gerenciamento</span></a></button>
+                </div>
                 </p>
                 <h3>Dashboard captura de água da chuva</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -73,63 +81,91 @@ function Projetos() {
                 </p>
                 <p className="default">
                     O dashboard foi feito para teros uma idéia do quanto seria útil a implementação do sistema, além de analisar o custo-benefício.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={dashboard_water_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn download"><a href={dashboard_water_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content download"><a href={dashboard_water_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                    </div>
                 </p>
                 <h3>Dashboard de analise de clima </h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Esse foi um dashboard desenvolvido para uma atividade escolar com o fim de analisar o clima de uma cidade específica por um período de 60 dias. Após, ocorreu uma apresentação analisando diversos fatores climáticos do período estipulado.
+                                    <div className="image-box">
+                        <div class="image-divisor top"></div>
                 <video autoplay="autoplay" loop="loop" muted>
                     <source src={dashboard_wheather_vi} type="video/mp4"/>
                 </video>
-                    <button type="button" className="link_btn download"><a href={dashboard_wheather_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content download"><a href={dashboard_wheather_fi} target="_blank"><img src={download_ic}></img><span>Baixar dashboard</span></a></button>
+                </div>
                 </p>
                 <h3>Barra de pesquisa dinâmica com sub-opções</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Esse é  um sistema de pesquisa que utiliza a distância de levenshtein - que é  a distancia entre dois textos - com palavras armazenadas em um banco de dados e retorna a palavra principal ou a palavra do subconjunto buscada junto de seu subconjunto caso haja um. Esse sistema de pesquisa foi desenvolvido especialmente para o Calcbro, contudo, ele pode ser adaptado para outros fins. O código está disponível em meu perfil do github.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={search_bar_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/tree/main/scripts/public/javascript/modules/search_bar" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    </div>
                 </p>
-                <h3>Desenho técnico catapult de palitos</h3>
+                <h3>Desenho técnico catapulta de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                 Esse é um desenho em perspectiva para um projeto escolar de desenvolvimento de uma catapult de palitos de picolé e elásticos para competição. Após pronta, foi a catapult vencedora da competição, alcançando 7 metros de arremesso.
+                    <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <img src={catapult_drawing_im}></img>
-                    <button type="button" className="link_btn download"><a href={catapult_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content download"><a href={catapult_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    </div>
                 </p>
                 <h3>Desenho técnico ponte de palitos</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Esse é um desenho em perspectiva para outro projeto escolar de competição, porém, dessa vez uma ponte de palitos de picolé. A ponte suportou 22.5KG e cedeu devido ao entortamento lateral da estrutura.
+                    <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <img src={bridge_drawing_im}></img>
-                    <button type="button" className="link_btn download"><a href={bridge_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content download"><a href={bridge_fi} target="_blank"><img src={download_ic}></img><span>Baixar arquivo DWG</span></a></button>
+                    </div>
                 </p>
-                <h3>Sistema de validação de segurança com tokens.</h3>
+                <h3>Sistema de validação de segurança com tokens</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
-                    Essa função é um sistema de login junto com a função "lembrar-me" com autenticação camuflada por meio de tokens de identificação que são atualizados à cada comunicação feita com o banco de dados.
+                    Essa função é um sistema de login e função "lembrar-me" com autenticação camuflada por meio de tokens de identificação que são atualizados à cada comunicação feita com o banco de dados.
                 </p>
                 <p className="default">
                     Esse sistema aumenta a segurança da conta, impedindo que sejam realizados ataques de força bruta, pois a cada interação é gerado um novo tokem para o usuário e caso a autenticação seja realizada por meio de cookies - por causa do "lembrar-me" - também é anexado um tokem de segurança à seção conectada.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={login_system_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn github"><a href="github/" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content github"><a href="https://github.com/funchaal/CalcBro/blob/main/scripts/app.js#L98" target="_blank"><img src={github_ic}></img><span>Ver no GitHub</span></a></button>
+                    </div>
                 </p>
                 <h3>Planilha automatizada de criação e formatação de fichas de referências bibliograficas</h3>
                 <div className="subtitle-divisor divisor"></div>
                 <p className="default">
                     Essa foi um projeto simples que desenvolvi para auxiliar no registro de referências bibliograficas para o TCC do ensino médio. Embora seja simples, foi muito útil para a padronização das fichas.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={documentation_sheet_vi} type="video/mp4"/>
                     </video>
-                    <button type="button" className="link_btn download"><a href={documentation_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de resgitro</span></a></button>
+                    <div class="image-divisor bottom"></div>
+                    <button type="button" className="link-content download"><a href={documentation_sheet_fi} target="_blank"><img src={download_ic}></img><span>Baixar planilha de resgitro</span></a></button>
+                    </div>
                 </p>
                 <h3>Este potifólio</h3>
                 <div className="subtitle-divisor divisor"></div>
@@ -138,10 +174,15 @@ function Projetos() {
                 </p>
                 <p className="default">
                     Este site é desenvolvido em ReactJS e foi feito especialmente por mim.
+                                        <div className="image-box">
+                        <div class="image-divisor top"></div>
                     <video autoplay="autoplay" loop="loop" muted>
                         <source src={portifolio_vi} type="video/mp4"/>
                     </video>
+                    <div class="image-divisor bottom"></div>
+                    </div>
                 </p>
+                <FollowTo name="projetos"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

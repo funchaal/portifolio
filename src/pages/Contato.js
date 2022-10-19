@@ -1,5 +1,6 @@
 //React
 import { useState } from 'react'
+import CopyToClipboard from 'react-copy-to-clipboard'
 
 //Modules
 import sendMessage from '../modules/message.js'
@@ -8,16 +9,21 @@ import sendMessage from '../modules/message.js'
 import contact_il from '../images/illustrations/contact-il.svg'
 
 //Icons
-import mail_ic from '../images/icons/mail-ic.svg'
-import whatsapp_ic from '../images/icons/whatsapp-ic.svg'
-import cellphone_ic from '../images/icons/cellphone-ic.svg'
+import whatsapp_gradient_ic from '../images/icons/whatsapp-gradient-ic.svg'
+import cellphone_gradient_ic from '../images/icons/cellphone-gradient-ic.svg'
+import location_gradient_ic from '../images/icons/location-gradient-ic.svg'
+import mail_gradient_ic from '../images/icons/mail-gradient-ic.svg'
 import clipboard_ic from '../images/icons/clipboard-ic.svg'
-import location_ic from '../images/icons/location-ic.svg'
+import reticences_ic from '../images/icons/reticences-ic.svg'
 import x_ic from '../images/icons/x-ic.svg'
 import hand_ic from '../images/icons/hand-ic.svg'
 import loading_ic from '../images/icons/loading-ic.svg'
 
-function Contato() {
+import FollowTo from '../components/FollowTo.js'
+
+import floatingMenu from '../modules/floatingMenu.js'
+
+function Contato(props) {
 
     const [submitable, setSubmitable] = useState(true)
 
@@ -68,45 +74,104 @@ function Contato() {
         }
     }
 
+    function copy(string, success) {
+        if (success) {
+            sendMessage('Copiado!', 'green')
+        } else {
+            sendMessage('Houve um erro ao copiar :/', 'red')
+        }
+    }
+
     return (
         <div id="main_container">
             <div class="side left">
                 <h1 className="title">Contato </h1>
                 <div className="title-divisor divisor"></div>
-                <p className="default" style={{ textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
-                <div className="contact-box">
-                    <a href="mailto:rafael.funchal@outlook.com" target="_blank">
-                        <img src={mail_ic}></img>
-                        <span>rafael.funchal@outlook.com</span>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Para entrar em contato comigo, você pode usar meu email: </p>
+                <div className="contact-box no" id="email_1">
+                    <a onClick={floatingMenu}>
+                        <img src={mail_gradient_ic}></img>
+                        rafael.funchal@outlook.com
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
+                    <div className="menu-contact-box" finder="email_1">
+                        <div className="menu-contact-ctn">
+                            <a href="mailto:rafael.funchal@outlook.com" target="_blank">
+                                <img src={mail_gradient_ic}></img>
+                                Enviar
+                            </a>
+                            <CopyToClipboard text="rafael.funchal@outlook.com" onCopy={copy}>
+                                <a>
+                                    <img src={clipboard_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
+                        </div>
+                    </div>
                 </div>
-                <p className="default" style={{ textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
-                <div className="contact-box">
-                    <a href="https://api.whatsapp.com/send?phone=5513981262295&text=Mande%20uma%20mensagem%2C%20costumo%20responder%20logo." target="_blank">
-                        <img src={whatsapp_ic}></img>
-                        <span>+55 13 98126-2295</span>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Ou meu número de celular, que pode ser utilizado tanto para ligações quanto para WhatsApp se preferir: </p>
+                <div className="contact-box no" id="cell_1">
+                    <a onClick={floatingMenu}>
+                        <img src={whatsapp_gradient_ic}></img>
+                        +55 13 98126-2295
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
+                    <div className="menu-contact-box three-options" finder="cell_1">
+                        <div className="menu-contact-ctn">
+                            <a href="https://api.whatsapp.com/send?phone=5513981262295" target="_blank">
+                                <img src={whatsapp_gradient_ic}></img>
+                                Chamar
+                            </a>
+                            <CopyToClipboard text="+55 13 98126-2295" onCopy={copy}>
+                                <a>
+                                    <img src={clipboard_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
+                            <a href="tel:+5513981262295">
+                                <img src={cellphone_gradient_ic}></img>
+                                Ligar
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <p className="default" style={{ textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
-                <div className="contact-box">
-                    <a href="tel:+5513981235835" target="_blank">
-                        <img src={cellphone_ic}></img>
-                        <span>+55 13 98123-5835</span>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Dificilmente algo dá errado com meu número principal, porém, caso algo acontecer, entre em contato com esse número reserva: </p>
+                <div className="contact-box no" id="cell_2">
+                    <a onClick={floatingMenu}>
+                        <img src={cellphone_gradient_ic}></img>
+                        +55 13 98123-5835
                     </a>
-                    <img src={clipboard_ic}></img>
+                    <div className="reticences" onClick={floatingMenu}>
+                        <img src={reticences_ic}></img>
+                    </div>
+                    <div className="menu-contact-box" finder="cell_2">
+                        <div className="menu-contact-ctn">
+                            <a href="tel:+5513981235835">
+                                <img src={cellphone_gradient_ic}></img>
+                                Ligar
+                            </a>
+                            <CopyToClipboard text="+55 13 98123-5835" onCopy={copy}>
+                                <a>
+                                    <img src={clipboard_ic}></img>
+                                    Copiar
+                                </a>
+                            </CopyToClipboard>
+                        </div>
+                    </div>
                 </div>
-                <p className="default" style={{ textIndent: 0, fontSize: '1.1em' }}>Residente em: </p>
+                <p className="default" style={{ width: 'unset', textIndent: 0 }}>Sou residente na cidade de Guarujá, no estado de São Paulo, Brasil. Dê uma olhada no mapa:</p>
                 <div className="contact-box location" onClick={(e) => e.currentTarget.classList.toggle('on')}>
-                    <img src={location_ic} className="hide"></img>
+                    <img src={location_gradient_ic} className="hide"></img>
                     <span className="hide">Guarujá - SP</span>
                     <img src={x_ic} className="x" style={{ width: '15px' }}></img>
                     <img src={hand_ic} className="hide hand"></img>
                     <div className="map" style={{ left: '20px' }}>
                         <div className="mapouter" style={{position: "relative", textAlign: "right", height: "400px", width: "500px", maxWidth: "70vw" }}><div className="gmap_canvas" style={{overflow: "hidden", background: "none !important", height: "400px", width: "500px", maxWidth: "70vw" }}><iframe style={{ width: "100%", height: "400px", maxWidth: "100%" }} id="gmap_canvas" src="https://maps.google.com/maps?q=guaruja&t=&z=7&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><a href="https://123movies-to.org"></a><br></br><a href="https://www.embedgooglemap.net">embedding map</a></div></div>
                     </div>
-                    <img src={clipboard_ic}></img>
                 </div>
                 <form id="contact_form" onSubmit={formSubmit}>
                     <h3>Mensagem direta</h3>
@@ -126,6 +191,7 @@ function Contato() {
                     </div>
                     <button type="submit"><span>Enviar </span><img src={loading_ic} className="loading"></img></button>
                 </form>
+                <FollowTo name="contato"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">

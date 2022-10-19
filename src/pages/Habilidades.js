@@ -1,24 +1,29 @@
 //Ilustrations
 import skills_il from '../images/illustrations/skills-il.svg'
 
-function Habilidades() {
+import FollowTo from '../components/FollowTo.js'
+
+import ItemBox from '../components/ItemBox.js'
+
+function Habilidades(props) {
     return (
         <div id="main_container">
-            <div class="side left">
+            <div className="side left">
                 <h1 className="title">Habilidades </h1>
                 <div className="title-divisor divisor"></div>
+                <ItemBox items="lógica, programação, análise exploratória, desenho CAD, excel, modelagem 3D, photoshop"/>
                 <p className="default">
-                    Como sempre tive extremo gosto por estudar e grande vontade de atuar na área da técnologia, passei praticamente minha vida estudando e praticando na área com projetos pessoais tais como programas, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, contudo, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação até modelagem 3D e animação.
+                    Como sempre gostei muito de tecnologia, passei praticamente minha vida me decicando aos estudos na área e acabei desenvolvendo diversos projetos tanto pessoais quanto acadêmicos, como programas, dashboards, desenhos 3D etc. Sempre tive grande interesse à tudo relacionado a software e computação, portanto, ao longo da minha vida já tive contato à diversas coisas relacionadas, desde programação e hardware até modelagem 3D e animação.
                 </p>
                 <p className="default">
-                    Ademais, acredito que como sempre pratiquei a lógica por causa da programação, hoje tenho grande capacidade e criatividade na resolução de problemas - isso aliado ao gosto por desafios.
+                    Acredito que como sempre pratiquei a lógica por causa da programação, hoje tenho grande capacidade e criatividade para a resolução de problemas - isso aliado ao gosto por desafios.
                 </p>
                 <p className="default" style={{ wordBreak: 'auto' }}>
-                    Entretando, quanto à habilidades técnicas, programação - principalmente no desenvolvimento de aplicações, analise de dados, e desenho CAD se destacam
+                    Quanto à habilidades técnicas: programação, ciência de dados, desenhos CAD e photoshop se destacam. Isso decorrênte do constante contato que tive à essas atividades durante a vida.
                 </p>
                 <p className="default" style={{ wordBreak: 'auto' }}>
-                    Isso decorrente da enorme carga de contato que tive à essas coisas durante a vida.
                 </p>
+                <FollowTo name="habilidades"/>
             </div>
             <div class="side right">
                 <div className="illustration_ctn">
