@@ -457,7 +457,7 @@ header {
 } /* ok */
 
 #intro_title_ctn .more {
-  max-width: fit-content;
+  /* max-width: 100%; */
   margin-top: 10px;
   height: max-content;
   animation: fade-in 800ms ease-out forwards 1500ms;
@@ -465,39 +465,23 @@ header {
 }
 
 #intro_title_ctn .more p {
-  font-size: 1.3em;
+  font-size: 1.2em;
   text-align: justify;
-  opacity: 80%;
-  max-width: 100%;
+  /* max-width: 100%; */
   overflow: hidden;
   margin-bottom: 10px;
-  white-space: wrap;
-  text-justify: distribute;
+  /* white-space: wrap; */
+  /* text-justify: distribute; */
   transition-duration: 300ms;
   transition-timing-function: ease-out;
 }
 
-#intro_title_ctn .more p.hide {
-  visibility: hidden;
-  opacity: 0;
-  max-height: 0;
-  transition-duration: 800ms;
-}
-
-#intro_title_ctn.on .more p.hide {
-  visibility: visible;
-  opacity: 80%;
-  max-height: 300px;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-  transition-duration: 1000ms;
-}
-
 #intro_title_ctn button {
   position: relative;
-  padding: 10px 15px;
+  padding: 12px;
   float: right;
   z-index: 1;
-  width: 250px;
+  width: 200px;
   border-radius: 50px;
   background-image: linear-gradient(to bottom right, rgb(0, 210, 88), rgb(0, 103, 187));
   /* background-image: linear-gradient(to left, rgb(199, 0, 199), rgb(0, 47, 255)); */
@@ -519,6 +503,7 @@ header {
 }
 
 #intro_title_ctn {
+  width: min-content;
   opacity: 0;
   animation: intro-title-bx-in 2000ms ease-out forwards 200ms;
   transition-duration: 1000ms;
@@ -548,6 +533,7 @@ header {
 
 #intro_title_ctn h2 {
   margin-top: auto;
+  white-space: nowrap;
   font-weight: 400;
   font-size: 1.5em;
   line-height: 1.1em;
